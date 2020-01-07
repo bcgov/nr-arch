@@ -116,64 +116,63 @@ Non-functional requirements (also known as "technical requirements”) specify c
 ### Additional reference information can is here:
 https://en.wikipedia.org/wiki/ISO/IEC_9126#Developments
 The standard is divided into four parts:
-* quality model
-* external metrics
-* internal metrics
-* quality in use metrics.
+* Quality model
+* External metrics
+* Internal metrics
+* Quality in use metrics.
 
 Of particular note for the review of IB/TAC submissions, the following are taken into consideration:
 
 * Functional Suitability - A set of attributes that bear on the existence of a set of functions and their specified properties. The functions are those that satisfy stated or implied needs.
--- Suitability (functional appropriateness)
--- Accuracy (functional correctness)
--- Functional Compliance
--- Functional Completeness
+    * Suitability (functional appropriateness)
+    * Accuracy (functional correctness)
+    * Functional Compliance
+    * Functional Completeness
 
 * Reliability - A set of attributes that bear on the capability of software to maintain its level of performance under stated conditions for a stated period of time.
--- Maturity
--- Fault Tolerance
--- Recoverability
--- Reliability Compliance
--- Availability
+    * Maturity
+    * Fault Tolerance
+    * Recoverability
+    * Reliability Compliance
+    * Availability
 
 * Usability - A set of attributes that bear on the effort needed for use, and on the individual assessment of such use, by a stated or implied set of users.
--- Understandability (appropriateness recognizability)
--- Learnability
--- Operability
--- Attractiveness (user interface aesthetics)
--- Usability Compliance
--- User Error Protection
--- Accessibility
+    * Understandability (appropriateness recognizability)
+    * Learnability
+    * Operability
+    * Attractiveness (user interface aesthetics)
+    * Usability Compliance
+    * User Error Protection
+    * Accessibility
 
 * Performance Efficiency - A set of attributes that bear on the relationship between the level of performance of the software and the amount of resources used, under stated conditions.
--- Time Behaviour
--- Resource Utilization
--- Efficiency Compliance
--- Capacity
+    * Time Behaviour
+    * Resource Utilization
+    * Efficiency Compliance
+    * Capacity
 
 * Maintainability - A set of attributes that bear on the effort needed to make specified modifications.
--- Analyzability
--- Changeability
--- Stability
--- Testability
--- Maintainability Compliance
--- Modularity
--- Reusability
+    * Analyzability
+    * Changeability
+    * Stability
+    * Testability
+    * Maintainability Compliance
+    * Modularity
+    * Reusability
 
 * Portability - A set of attributes that bear on the ability of software to be transferred from one environment to another.
--- Adaptability
--- Installability
--- Replaceability
--- Portability Compliance
+    * Adaptability
+    * Installability
+    * Replaceability
+    * Portability Compliance
 
 * Compatibility – A set of attributes that bear on the ability of multiple components to exist or function in a system or environment without mutual interference
--- Coexistence
--- Interoperability
+    * Coexistence
+    * Interoperability
 
-* Security – A set if attributes that describe the characteristic or degree of being securable,
-especially the ability of a system to provide different levels of secure access.
--- Confidentiality (data accessible only by those authorized)
--- Integrity (protection from unauthorized modification)
--- Non-Repudiation (actions can be proven to have taken place)
--- Accountability (actions can be traced to who did them)
--- Authenticity (identity can be proved to be the one claimed)
+* Security – A set if attributes that describe the characteristic or degree of being securable, especially the ability of a system to provide different levels of secure access.
+    * Confidentiality (data accessible only by those authorized)
+    * Integrity (protection from unauthorized modification)
+    * Non-Repudiation (actions can be proven to have taken place)
+    * Accountability (actions can be traced to who did them)
+    * Authenticity (identity can be proved to be the one claimed)
