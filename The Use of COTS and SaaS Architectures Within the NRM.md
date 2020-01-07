@@ -1,5 +1,5 @@
 
-# The Use of COTS and Saas Architectures Within the NRM
+# The Use of COTS and SaaS Architectures Within the NRM
 
 ### How to contribute
 Government employees, public and members of the private sector are encouraged to contribute to the repository by **forking and submitting a pull request**. 
@@ -47,9 +47,7 @@ these types of solutions for the Natural Resource Sector. Some of these risks in
   10. Extended delay due to the Province’s procurement requirements
 
 To manage this risk the TAC will bring additional evaluation effort to risk aspects during the
-review of submissions.
-
-The following potential implications will also be factored into a review:
+review of submissions. The following potential implications will also be factored into a review:
   1. Evaluation will not be based on vendor marketing material; however, marketing materials can be used to identify desired capabilities for which further evaluation is required.
   2. Evaluation should include a full-feature, unrestricted evaluation of the product for 30 days. For COTS, this should include on-site installation.
   3. Because code practices cannot be reviewed, security assessments are made more difficult. Security control checklists, vulnerability assessments, and architectural evaluations should be performed to assess the level of application security and required controls.
@@ -57,11 +55,11 @@ The following potential implications will also be factored into a review:
   5. Evaluations require full requirements gathering in order to assess fit.
   6. COTS/SaaS may not be considered if only one viable COTS/SaaS system is in the market, in order to protect the Province’s business.
   7. Software quality attributes (ISO 25010) with special relevance in COTS/SaaS assessment and which may be especially (adversely) affected by COTS/SaaS include:
-  * Transferability.
-  * Modifiability (especially including Reusability, Analyzability, Modification stability and Testability).
-  * Compatibility (especially including Replaceability and Interoperability).
-  * Security.
-  * Efficiency (especially, Scalability).
+    * Transferability.
+    * Modifiability (especially including Reusability, Analyzability, Modification stability and Testability).
+    * Compatibility (especially including Replaceability and Interoperability).
+    * Security.
+    * Efficiency (especially, Scalability).
   8. The use of service intermediaries (service wrappers) for COTS is recommended. 
   
 Submissions to the TAC identifying transitional architectures should incorporate the above into
@@ -70,10 +68,10 @@ their submission.
 ## Future Direction
 The TAC will evaluate all submissions for COTS and SaaS solutions. The IB/TAC see the use
 of COTS/SaaS in two ways:
-  a. Variances/exceptions (a particular COTS/SaaS makes sense in this specific business case
+* Variances/exceptions (a particular COTS/SaaS makes sense in this specific business case
 but is not a target part of the NRS architecture – using it in a different line of business
 implies another request for variance). An approval of a variance is an instance only.
-  b. Extensions (this COTS/SaaS makes sense overall for the NRS and we want to steer
+* Extensions (this COTS/SaaS makes sense overall for the NRS and we want to steer
 solutions towards it as much as possible).
 
 Additional factors the TAC takes into consideration on these submissions:
@@ -113,8 +111,8 @@ Consider splitting this document into two discrete documents, one for COTS, one 
 
 Non-functional requirements (also known as "technical requirements”) specify criteria that can be used to judge the operation of a system, rather than specific behaviours. Based on the ISO/IEC 9126 and subsequent ISO/IEC 25010 standards, the fundamental objective is to address some of the well-known human biases that can adversely affect the delivery and perception of a software development project. These biases include changing priorities after the start of a project or not having any clear definitions of "success." By clarifying, then agreeing on the project priorities and subsequently converting abstract priorities (compliance) to measurable values (output data can be validated against schema X with zero intervention), ISO/IEC 9126/25010 tries to develop a common understanding of the project's objectives and goals.
 
-### Additional reference information can is here:
-https://en.wikipedia.org/wiki/ISO/IEC_9126#Developments
+### Additional reference information can is here: https://en.wikipedia.org/wiki/ISO/IEC_9126#Developments
+
 The standard is divided into four parts:
 * Quality model
 * External metrics
@@ -123,20 +121,20 @@ The standard is divided into four parts:
 
 Of particular note for the review of IB/TAC submissions, the following are taken into consideration:
 
-* Functional Suitability - A set of attributes that bear on the existence of a set of functions and their specified properties. The functions are those that satisfy stated or implied needs.
+* **Functional** Suitability - A set of attributes that bear on the existence of a set of functions and their specified properties. The functions are those that satisfy stated or implied needs.
     * Suitability (functional appropriateness)
     * Accuracy (functional correctness)
     * Functional Compliance
     * Functional Completeness
 
-* Reliability - A set of attributes that bear on the capability of software to maintain its level of performance under stated conditions for a stated period of time.
+* **Reliability** - A set of attributes that bear on the capability of software to maintain its level of performance under stated conditions for a stated period of time.
     * Maturity
     * Fault Tolerance
     * Recoverability
     * Reliability Compliance
     * Availability
 
-* Usability - A set of attributes that bear on the effort needed for use, and on the individual assessment of such use, by a stated or implied set of users.
+* **Usability** - A set of attributes that bear on the effort needed for use, and on the individual assessment of such use, by a stated or implied set of users.
     * Understandability (appropriateness recognizability)
     * Learnability
     * Operability
@@ -145,13 +143,13 @@ Of particular note for the review of IB/TAC submissions, the following are taken
     * User Error Protection
     * Accessibility
 
-* Performance Efficiency - A set of attributes that bear on the relationship between the level of performance of the software and the amount of resources used, under stated conditions.
+* **Performance Efficiency** - A set of attributes that bear on the relationship between the level of performance of the software and the amount of resources used, under stated conditions.
     * Time Behaviour
     * Resource Utilization
     * Efficiency Compliance
     * Capacity
 
-* Maintainability - A set of attributes that bear on the effort needed to make specified modifications.
+* **Maintainability** - A set of attributes that bear on the effort needed to make specified modifications.
     * Analyzability
     * Changeability
     * Stability
@@ -160,17 +158,17 @@ Of particular note for the review of IB/TAC submissions, the following are taken
     * Modularity
     * Reusability
 
-* Portability - A set of attributes that bear on the ability of software to be transferred from one environment to another.
+* **Portability** - A set of attributes that bear on the ability of software to be transferred from one environment to another.
     * Adaptability
     * Installability
     * Replaceability
     * Portability Compliance
 
-* Compatibility – A set of attributes that bear on the ability of multiple components to exist or function in a system or environment without mutual interference
+* **Compatibility** – A set of attributes that bear on the ability of multiple components to exist or function in a system or environment without mutual interference
     * Coexistence
     * Interoperability
 
-* Security – A set if attributes that describe the characteristic or degree of being securable, especially the ability of a system to provide different levels of secure access.
+* **Security** – A set if attributes that describe the characteristic or degree of being securable, especially the ability of a system to provide different levels of secure access.
     * Confidentiality (data accessible only by those authorized)
     * Integrity (protection from unauthorized modification)
     * Non-Repudiation (actions can be proven to have taken place)
