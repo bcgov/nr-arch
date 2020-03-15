@@ -4,7 +4,7 @@ This subfolder structured to use the ADR Tools approach to generating architectu
 The Markdown ADR Documents can be created manually (once the template has been created see - https://github.com/bcgov/nr-arch/blob/master/adrs/doc/adr/0001-record-architecture-decisions.md) or they can be created using ADR-TOOLS (see below for further readin).<br><br>
 
 The Index file here - https://github.com/bcgov/nr-arch/blob/master/adrs/index.html
-Has been generated using the python library ADR-VIEWER (see python package [adr-viewer](https://pypi.org/project/adr-viewer/)). This script converts the markdown ADR files to an HTML format - to see it rendered go here 
+Has been generated using the python library ADR-VIEWER (see python package [adr-viewer](https://pypi.org/project/adr-viewer/)). This script converts the markdown ADR files to an HTML format - to see it rendered go here https://bcgov.github.io/nr-arch/
 
 ## Further reading
 <http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions><br>
