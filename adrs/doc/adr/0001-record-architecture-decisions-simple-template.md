@@ -1,4 +1,4 @@
-# 1. Record architecture decisions
+# 1. Record architecture decisions Simple Template
 
 Date: 2020-03-14
 
