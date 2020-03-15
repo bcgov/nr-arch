@@ -1,14 +1,14 @@
 ## Architectural Decision Records (ADR) for Natural Resource Ministries (NRM) Architects
 
-This subfolder structured to use the ADR Tools approach to generating architectural decision records. 
+This subfolder structured to use the ADR Tools approach to generating architectural decision records.
 The Markdown ADR Documents can be created manually (once the template has been created see - https://github.com/bcgov/nr-arch/blob/master/adrs/doc/adr/0001-record-architecture-decisions.md) or they can be created using ADR-TOOLS (see below for further readin).<br><br>
 
-The Index file here - https://github.com/bcgov/nr-arch/blob/master/adrs/index.html
-Has been generated using the python library ADR-VIEWER (see python package [adr-viewer](https://pypi.org/project/adr-viewer/)). This script converts the markdown ADR files to an HTML format - to see it rendered go here https://bcgov.github.io/nr-arch/ (command in WSL - VSCODE - "adr-viewer --adr-path /mnt/c/sw_nt/Git/nr-arch/adrs/doc/adr")
+The Index file here - <https://github.com/bcgov/nr-arch/blob/master/adrs/index.html>
+Has been generated using the python library ADR-VIEWER (see python package [adr-viewer](https://pypi.org/project/adr-viewer/)). This script converts the markdown ADR files to an HTML format - to see it rendered go here <https://bcgov.github.io/nr-arch/> (command in WSL - VSCODE - "adr-viewer --adr-path /mnt/c/sw_nt/Git/nr-arch/adrs/doc/adr")
 
 ## Further reading
 <http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions><br>
-https://github.com/npryce/adr-tools 
+<https://github.com/npryce/adr-tools> 
 
 Initialise and generate the first few pages in index.html, the python implementation was used:<br>
 <https://bitbucket.org/tinkerer_/adr-tools-python/src/master/>
@@ -61,7 +61,7 @@ From the documentation of [adr-tools][]:
 > # E.g. to create a new ADR that supercedes ADR 12:
 > 
 > adr new -s 12 Use PostgreSQL Database
-> 
+>
 > # E.g. to create a new ADR that supercedes ADRs 3 and 4, and amends ADR 5:
 >
 > adr new -s 3 -s 4 -l "5:Amends:Amended by" Use Riak CRDTs to cope with scale
