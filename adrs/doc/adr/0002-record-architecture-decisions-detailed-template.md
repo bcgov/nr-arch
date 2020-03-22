@@ -4,11 +4,12 @@ Date: 2020-03-14
 
 ## Status
 
-Accepted
+What is the status, such as proposed, accepted, rejected, deprecated, superseded, etc.?
 
 ## Context
 
 The issue motivatina# [short title of solved problem and solution]
+What is the issue that we're seeing that is motivating this decision or change?
 
 * Status: [proposed | rejected | accepted | deprecated | ... | superseded by [ADR-0005](0005-example.md)] <!-- optional -->
 * Deciders: [list everyone involved in the decision] <!-- optional -->
@@ -82,7 +83,7 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 * ... <!-- numbers of links can vary -->g this decision, and any context that influences or constrains the decision.
 
 ## Decision
-
+What is the change that we're proposing and/or doing?
 The change that we're proposing or have agreed to implement.
 
 ## Consequences
