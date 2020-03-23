@@ -10,11 +10,11 @@ proposed/exploratory
 
 The issue motivatina# [Do we need more GPUs to support a growth in ArcGIS Pro GTS usage?]
 
-* Status: [proposed / exploratory] <!-- optional -->
-* Deciders: [Scott Sharp, Michelle Douville, Jeff Card, David Ell] <!-- optional -->
-* Date: [2020-03-22] <!-- optional -->
+* Status: [proposed / exploratory] - optional 
+* Deciders: [Scott Sharp, Michelle Douville, Jeff Card, David Ell] - optional 
+* Date: [2020-03-22] - optional 
 
-Technical Story: [description | ticket/issue URL] <!-- optional -->
+Technical Story: [description | ticket/issue URL] - optional 
 
 * ArcGIS Pro is the main use case for GPU(s)
 * IITD maintain servers with ArcGIS Pro on them currently as part of a proof on concept - there are currently two GPUs on 2 test servers. 
@@ -77,29 +77,18 @@ BCTS 9 servers - ArcGIS - flipping switching and going PRO and their pool may wa
 
 $170 advanced desktop - vs GTS pool.. Deal with patching, licensing, versions, latency to file shares
 
-Using licensing manager.. 17-22 standalone..BCTS/WF/PTSG/HAIDA GWAII…
-
+Using licensing manager.. 17-22 standalone..BCTS/WF/PTSG/HAIDA GWAII...
  
 
 COP discussed PRO vs Desktop - training, access, GeoBC has a lot of stand alone PRO..
-
 ArcGIS ArcGIS Online -GEOBC -  licenses.. DataBC - disabled theirs.
-
- 
-
  
 
 2 GPU (in place) isolated prod and test.
 
 Concurrent license manager vs manager
 
-Frank Burkheart, David Ell
-
- 
-
-
-
-
+Frank Burkheart and David Ell
 
 ## Context and Problem Statement
 
@@ -107,66 +96,66 @@ Frank Burkheart, David Ell
 
 
 
-## Decision Drivers <!-- optional -->
+## Decision Drivers - optional 
 
 * [driver 1, e.g., a force, facing concern, ...]
 * [driver 2, e.g., a force, facing concern, ...]
-* ... <!-- numbers of drivers can vary -->
+* ... - numbers of drivers can vary 
 
 ## Considered Options
 
 * [option 1]
 * [option 2]
 * [option 3]
-* ... <!-- numbers of options can vary -->
+* ... - numbers of options can vary 
 
 ## Decision Outcome
 
 Chosen option: "[option 1]", because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | ... | comes out best (see below)].
 
-### Positive Consequences <!-- optional -->
+### Positive Consequences - optional 
 
 * [e.g., improvement of quality attribute satisfaction, follow-up decisions required, ...]
 * ...
 
-### Negative Consequences <!-- optional -->
+### Negative Consequences - optional 
 
 * [e.g., compromising quality attribute, follow-up decisions required, ...]
 * ...
 
-## Pros and Cons of the Options <!-- optional -->
+## Pros and Cons of the Options - optional 
 
 ### [option 1]
 
-[example | description | pointer to more information | ...] <!-- optional -->
+[example | description | pointer to more information | ...] - optional 
 
 * Good, because [argument a]
 * Good, because [argument b]
 * Bad, because [argument c]
-* ... <!-- numbers of pros and cons can vary -->
+* ... - numbers of pros and cons can vary 
 
 ### [option 2]
 
-[example | description | pointer to more information | ...] <!-- optional -->
+[example | description | pointer to more information | ...] - optional 
 
 * Good, because [argument a]
 * Good, because [argument b]
 * Bad, because [argument c]
-* ... <!-- numbers of pros and cons can vary -->
+* ... - numbers of pros and cons can vary 
 
 ### [option 3]
 
-[example | description | pointer to more information | ...] <!-- optional -->
+[example | description | pointer to more information | ...] - optional 
 
 * Good, because [argument a]
 * Good, because [argument b]
 * Bad, because [argument c]
-* ... <!-- numbers of pros and cons can vary -->
+* ... - numbers of pros and cons can vary 
 
-## Links <!-- optional -->
+## Links - optional 
 
-* [Link type] [Link to ADR] <!-- example: Refined by [ADR-0005](0005-example.md) -->
-* ... <!-- numbers of links can vary -->g this decision, and any context that influences or constrains the decision.
+* [Link type] [Link to ADR] - example: Refined by [ADR-0005](0005-example.md) 
+* ... - numbers of links can vary g this decision, and any context that influences or constrains the decision.
 
 ## Decision
 
