@@ -1,4 +1,4 @@
-## Architectural Decision Records (ADR) for Natural Resource Ministries (NRM) Architects
+## Architectural Decision Records (ADR) for Natural Resource Ministries (NRM)
 
 This subfolder structured to use the ADR Tools approach to generating architectural decision records.
 The Markdown ADR Documents can be created manually (once the template has been created see - https://github.com/bcgov/nr-arch/blob/master/adrs/doc/adr/0001-record-architecture-decisions.md) or they can be created using ADR-TOOLS (see below for further readin).<br><br>
