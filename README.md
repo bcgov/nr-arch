@@ -5,3 +5,7 @@ https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%
 
 ## Architectural Records of Decision Index
 https://bcgov.github.io/nr-arch/
+
+
+## How To's - Architectural Decision Records (ADRs) for Natural Resource Ministries (NRM)
+https://github.com/bcgov/nr-arch/blob/master/docs/readme.md
