@@ -4,7 +4,7 @@ Date: 2020-03-14
 
 ## Status
 
-What is the status, such as proposed, accepted, rejected, deprecated, superseded, etc.?
+What is the status, such as Proposed, Rejected, Deprecated, Accepted, Superceded, Amended, Unknown, Pending.
 
 ## Context
 
