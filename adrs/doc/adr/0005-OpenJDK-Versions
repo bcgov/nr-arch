@@ -1,4 +1,4 @@
-# 5. OpenJDK 
+# 5. OpenJDK
 
 Date: 2020-04-15
 
@@ -8,9 +8,9 @@ accepted
 
 ## Context
 
-This is a response from IITD Architecture to the IITD Infrastructure Team, and others, for an Official Statement on OpenJDK positioning. 
+This is a response from IITD Architecture to the IITD Infrastructure Team, and others, for an Official Statement on OpenJDK positioning.
 
-* Status: accepted 
+* Status: accepted
 * Deciders: [list everyone involved in the decision] <!-- optional -->
 * Date: [YYYY-MM-DD when the decision was last updated] <!-- optional -->
 
@@ -18,18 +18,15 @@ Technical Story: [description | ticket/issue URL] <!-- optional -->
 
 ## Context and Problem Statement
 
-This is a response from IITD Architecture to the IITD Infrastructure Team, and others, for an Official Statement on OpenJDK positioning. 
-
+This is a response from IITD Architecture to the IITD Infrastructure Team, and others, for an Official Statement on OpenJDK positioning.
 
 ## Decision Drivers <!-- optional -->
 
-* An official Information Innovation & Technology Division (IITD) statement is needed on the direction forward for target versions of Java/JDKs for all IITD hosted java applications.  Oracle has changed its licensing model, and will now be using a subscription model for charging for the use of its Oracle Java SE product releases. 
+* An official Information Innovation & Technology Division (IITD) statement is needed on the direction forward for target versions of Java/JDKs for all IITD hosted java applications.  Oracle has changed its licensing model, and will now be using a subscription model for charging for the use of its Oracle Java SE product releases.
 * Java SE 8 is the end of the legacy versioning and release cadence model; Java 9 was the new beginning.
 
-Oracle extended the public updates of its Oracle JDK to January 2019 for commercial production use, and at least the end of 2020 for individual desktop use. 
-
-Oracle JDK should be, for the most part, interchangeable with Oracle’s OpenJDK builds for those who want to move up to the next releases, as they did for Java 6->7 and Java 7->8. 
-
+Oracle extended the public updates of its Oracle JDK to January 2019 for commercial production use, and at least the end of 2020 for individual desktop use.
+Oracle JDK should be, for the most part, interchangeable with Oracle’s OpenJDK builds for those who want to move up to the next releases, as they did for Java 6->7 and Java 7->8.
 Java 10 is the suggested release by Oracle
 
 Oracle has posted more information on the roadmap for the Java Client (including Applets and Web Start).
@@ -44,8 +41,7 @@ Scope - IITD all server and client side applications owned by IITD that run Java
 ## Considered Options
 
 * Endorse migration to OpenJDK
-* Continue to use Oracle JDK and pay license fees 
-
+* Continue to use Oracle JDK and pay license fees
 
 ## Decision Outcome
 
@@ -66,7 +62,7 @@ depending on the archive type.
 * reduces security vulnerabilities of older JDK versions
 Java 7 is still in predominant use. It goes without saying that any version of Java below 7 should be updated immediately—even version 7 needs significant remediation for its fleet of vulnerabilities.
 
-Further vulnerabilities - https://www.cvedetails.com/product/19117/Oracle-JRE.html?vendor_id=93
+Further vulnerabilities - <https://www.cvedetails.com/product/19117/Oracle-JRE.html?vendor_id=93>
 
 ### Negative Consequences <!-- optional -->
 
@@ -106,11 +102,9 @@ Further vulnerabilities - https://www.cvedetails.com/product/19117/Oracle-JRE.ht
 
 * Infrastructure SMT Confluence space about  OracleJDK vs OpenJDK  last edits circa March 2019.
 
+<https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence>
 
-
-https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence
-
-https://www.oracle.com/technetwork/java/javase/overview/oracle-jdk-faqs.html
+<https://www.oracle.com/technetwork/java/javase/overview/oracle-jdk-faqs.html>
 
 "The previous Oracle Java SE license model had several options – some free under the Binary Code License (“BCL”) and some paid under Oracle commercial terms. To simplify and provide full licensing transparency and clarity, Oracle as of Java 9 provides two distinct Java releases:
 
@@ -121,6 +115,7 @@ If you are an organization used to getting Oracle Java SE binaries at no cost, y
 NOTE: Many third-party software vendors beside Oracle develop, test and certify their software for Oracle JDK and recommend its use to run their applications. Your application vendor may have an ISV agreement with Oracle to provide you with Java updates to run the application vendor’s product. If this is the case, you will not need a separate license from Oracle for Java running on the application. Please contact your application vendor to determine whether your application vendor is authorized to distribute Java to you with their application.
 
 ## Decision
+
 What is the change that we're proposing and/or doing?
 The change that we're proposing or have agreed to implement.
 

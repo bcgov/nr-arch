@@ -83,6 +83,7 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 * ... <!-- numbers of links can vary -->g this decision, and any context that influences or constrains the decision.
 
 ## Decision
+
 What is the change that we're proposing and/or doing?
 The change that we're proposing or have agreed to implement.
 
