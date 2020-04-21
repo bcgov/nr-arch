@@ -6,7 +6,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-        <title>Natural Resources Ministries Architecture Decision Records</title>
+        <title>ADR Viewer - adrs</title>
 
         <style type="text/css">
             body {
@@ -33,7 +33,7 @@
             }
 
             .panel-heading.adr-accepted {
-                background-color: rgb(144, 185, 238);
+                background-color: lightgreen;
             }
 
             .panel-heading.adr-superceded {
@@ -63,7 +63,7 @@
     </head>
     <body>
         <header>
-            <h1>Natural Resources Ministries Architecture Decision Records</h1>
+            <h1>ADR Viewer - adrs</h1>
         </header>
         <div class="panel-group">
             
@@ -203,14 +203,14 @@ The change that we're proposing or have agreed to implement.</p>
 <h2>Context</h2>
 <p>The issue motivatina# [Do we need more GPUs to support a growth in ArcGIS Pro GTS usage?]</p>
 <ul>
-<li>Status: [proposed / exploratory] - optional </li>
-<li>Deciders: [Scott Sharp, Michelle Douville, Jeff Card, David Ell] - optional </li>
-<li>Date: [2020-03-22] - optional </li>
+<li>Status: [proposed / exploratory] - optional</li>
+<li>Deciders: [Scott Sharp, Michelle Douville, Jeff Card, David Ell] - optional</li>
+<li>Date: [2020-03-22] - optional</li>
 </ul>
 <p>Technical Story: [description | ticket/issue URL] - optional</p>
 <ul>
 <li>ArcGIS Pro is the main use case for GPU(s)</li>
-<li>IITD maintain servers with ArcGIS Pro on them currently as part of a proof on concept - there are currently two GPUs on 2 test servers. </li>
+<li>IITD maintain servers with ArcGIS Pro on them currently as part of a proof on concept - there are currently two GPUs on 2 test servers.</li>
 <li>Only NVIDIA provides what ESRI recommends. <a href="https://desktop.arcgis.com/en/arcmap/latest/extensions/arcglobe/faqs-for-selecting-graphics-cards-globe.htm">https://desktop.arcgis.com/en/arcmap/latest/extensions/arcglobe/faqs-for-selecting-graphics-cards-globe.htm</a></li>
 <li>From ESRI Dev Summit - NVIDIA as concurrent licensing model is not cheap. and has Convoluted subscription levels..</li>
 <li>Scott Sharp is to Email on what the costs are.. And its not published - HP needs to provide the costs?</li>
@@ -259,14 +259,14 @@ ArcGIS ArcGIS Online -GEOBC -  licenses.. DataBC - disabled theirs.</p>
 <ul>
 <li>[driver 1, e.g., a force, facing concern, ...]</li>
 <li>[driver 2, e.g., a force, facing concern, ...]</li>
-<li>... - numbers of drivers can vary </li>
+<li>... - numbers of drivers can vary</li>
 </ul>
 <h2>Considered Options</h2>
 <ul>
 <li>[option 1]</li>
 <li>[option 2]</li>
 <li>[option 3]</li>
-<li>... - numbers of options can vary </li>
+<li>... - numbers of options can vary</li>
 </ul>
 <h2>Decision Outcome</h2>
 <p>Chosen option: "[option 1]", because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | ... | comes out best (see below)].</p>
@@ -287,7 +287,7 @@ ArcGIS ArcGIS Online -GEOBC -  licenses.. DataBC - disabled theirs.</p>
 <li>Good, because [argument a]</li>
 <li>Good, because [argument b]</li>
 <li>Bad, because [argument c]</li>
-<li>... - numbers of pros and cons can vary </li>
+<li>... - numbers of pros and cons can vary</li>
 </ul>
 <h3>[option 2]</h3>
 <p>[example | description | pointer to more information | ...] - optional</p>
@@ -295,7 +295,7 @@ ArcGIS ArcGIS Online -GEOBC -  licenses.. DataBC - disabled theirs.</p>
 <li>Good, because [argument a]</li>
 <li>Good, because [argument b]</li>
 <li>Bad, because [argument c]</li>
-<li>... - numbers of pros and cons can vary </li>
+<li>... - numbers of pros and cons can vary</li>
 </ul>
 <h3>[option 3]</h3>
 <p>[example | description | pointer to more information | ...] - optional</p>
@@ -303,11 +303,10 @@ ArcGIS ArcGIS Online -GEOBC -  licenses.. DataBC - disabled theirs.</p>
 <li>Good, because [argument a]</li>
 <li>Good, because [argument b]</li>
 <li>Bad, because [argument c]</li>
-<li>... - numbers of pros and cons can vary </li>
 </ul>
 <h2>Links - optional</h2>
 <ul>
-<li>[Link type] [Link to ADR] - example: Refined by <a href="0005-example.md">ADR-0005</a> </li>
+<li>[Link type] [Link to ADR] - example: Refined by <a href="0005-example.md">ADR-0005</a></li>
 <li>... - numbers of links can vary g this decision, and any context that influences or constrains the decision.</li>
 </ul>
 <h2>Decision</h2>
@@ -457,7 +456,7 @@ Scope - IITD all server and client side applications owned by IITD that run Java
 </ul>
 <h2>Decision Outcome</h2>
 <p>JDK 9 &amp; Later
-Oracle's OpenJDK JDK binaries for Windows, macOS, and Linux are available on release-specific pages of jdk.java.net as .tar.gz or .zip archives.</p>
+Oracles OpenJDK JDK binaries for Windows, macOS, and Linux are available on release-specific pages of jdk.java.net as .tar.gz or .zip archives.</p>
 <p>As an example, the archives for JDK 13 may be found on jdk.java.net/13 and may be extracted on the command line using</p>
 <p>$ tar xvf openjdk-13*_bin.tar.gz
 or</p>
@@ -467,7 +466,7 @@ depending on the archive type.</p>
 <ul>
 <li>removes the dependencies on Oracle JDK Licensing</li>
 <li>reduces security vulnerabilities of older JDK versions
-Java 7 is still in predominant use. It goes without saying that any version of Java below 7 should be updated immediately—even version 7 needs significant remediation for its fleet of vulnerabilities.</li>
+Java 7 is still in predominant use. It goes without saying that any version of Java below 7 should be updated immediately even version 7 needs significant remediation for its fleet of vulnerabilities.</li>
 </ul>
 <p>Further vulnerabilities - <a href="https://www.cvedetails.com/product/19117/Oracle-JRE.html?vendor_id=93">https://www.cvedetails.com/product/19117/Oracle-JRE.html?vendor_id=93</a></p>
 <h3>Negative Consequences &lt;!-- optional --&gt;</h3>
@@ -506,11 +505,11 @@ Java 7 is still in predominant use. It goes without saying that any version of J
 </ul>
 <p><a href="https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence">https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence</a></p>
 <p><a href="https://www.oracle.com/technetwork/java/javase/overview/oracle-jdk-faqs.html">https://www.oracle.com/technetwork/java/javase/overview/oracle-jdk-faqs.html</a></p>
-<p>"The previous Oracle Java SE license model had several options – some free under the Binary Code License (BCL) and some paid under Oracle commercial terms. To simplify and provide full licensing transparency and clarity, Oracle as of Java 9 provides two distinct Java releases:</p>
+<p>"The previous Oracle Java SE license model had several options - some free under the Binary Code License (BCL) and some paid under Oracle commercial terms. To simplify and provide full licensing transparency and clarity, Oracle as of Java 9 provides two distinct Java releases:</p>
 <p>Oracle OpenJDK releases under the open source GNU General Public License v2, with the Classpath Exception (GPLv2+CPE) (since Java 9),
 and Oracle Java SE product releases, which includes the Oracle JDK for Java 8 and later, and Oracle JRE with Java Web Start in Java 8, under the OTN License Agreement for Java SE. This license permits personal use, development, testing, prototyping, demonstrating and some other uses at no cost.
-If you are an organization used to getting Oracle Java SE binaries at no cost, you can simply continue doing so with Oracle's OpenJDK releases available at jdk.java.net. If you are used to getting Oracle Java SE binaries at no cost as a personal user or for development use, then you can continue to get Oracle Java SE releases through java.com (personal users) and the Oracle Technology Network (OTN) (developers). Those wishing to use the Oracle JDK or Oracle JRE for other uses will require a Java SE Subscription. Supported customers of Oracle products can continue to get their Oracle Java SE binaries from My Oracle Support (MOS) or Oracle Software Delivery Cloud (customers), and other locations."</p>
-<p>NOTE: Many third-party software vendors beside Oracle develop, test and certify their software for Oracle JDK and recommend its use to run their applications. Your application vendor may have an ISV agreement with Oracle to provide you with Java updates to run the application vendor’s product. If this is the case, you will not need a separate license from Oracle for Java running on the application. Please contact your application vendor to determine whether your application vendor is authorized to distribute Java to you with their application.</p>
+If you are an organization used to getting Oracle Java SE binaries at no cost, you can simply continue doing so with Oracles OpenJDK releases available at jdk.java.net. If you are used to getting Oracle Java SE binaries at no cost as a personal user or for development use, then you can continue to get Oracle Java SE releases through java.com (personal users) and the Oracle Technology Network (OTN) (developers). Those wishing to use the Oracle JDK or Oracle JRE for other uses will require a Java SE Subscription. Supported customers of Oracle products can continue to get their Oracle Java SE binaries from My Oracle Support (MOS) or Oracle Software Delivery Cloud (customers), and other locations."</p>
+<p>NOTE: Many third-party software vendors beside Oracle develop, test and certify their software for Oracle JDK and recommend its use to run their applications. Your application vendor may have an ISV agreement with Oracle to provide you with Java updates to run the application vendors product. If this is the case, you will not need a separate license from Oracle for Java running on the application. Please contact your application vendor to determine whether your application vendor is authorized to distribute Java to you with their application.</p>
 <h2>Decision</h2>
 <p>What is the change that we're proposing and/or doing?
 The change that we're proposing or have agreed to implement.</p>

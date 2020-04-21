@@ -4,23 +4,23 @@ Date: 2020-04-15
 
 ## Status
 
-accepted
+Accepted
 
 ## Context
 
 This is a response from IITD Architecture to the IITD Infrastructure Team, and others, for an Official Statement on OpenJDK positioning.
 
 * Status: accepted
-* Deciders: [list everyone involved in the decision] <!-- optional -->
-* Date: [YYYY-MM-DD when the decision was last updated] <!-- optional -->
+* Deciders: Licence Change
+* Date: 2020-04-01
 
-Technical Story: [description | ticket/issue URL] <!-- optional -->
+Technical Story: [description | <https://apps.nrs.gov.bc.ca/int/jira/browse/ARCH-62]>
 
 ## Context and Problem Statement
 
 This is a response from IITD Architecture to the IITD Infrastructure Team, and others, for an Official Statement on OpenJDK positioning.
 
-## Decision Drivers <!-- optional -->
+## Decision Drivers
 
 * An official Information Innovation & Technology Division (IITD) statement is needed on the direction forward for target versions of Java/JDKs for all IITD hosted java applications.  Oracle has changed its licensing model, and will now be using a subscription model for charging for the use of its Oracle Java SE product releases.
 * Java SE 8 is the end of the legacy versioning and release cadence model; Java 9 was the new beginning.
@@ -46,7 +46,7 @@ Scope - IITD all server and client side applications owned by IITD that run Java
 ## Decision Outcome
 
 JDK 9 & Later
-Oracle's OpenJDK JDK binaries for Windows, macOS, and Linux are available on release-specific pages of jdk.java.net as .tar.gz or .zip archives.
+Oracles OpenJDK JDK binaries for Windows, macOS, and Linux are available on release-specific pages of jdk.java.net as .tar.gz or .zip archives.
 
 As an example, the archives for JDK 13 may be found on jdk.java.net/13 and may be extracted on the command line using
 
@@ -56,49 +56,20 @@ or
 $ unzip openjdk-13*_bin.zip
 depending on the archive type.
 
-### Positive Consequences <!-- optional -->
+### Positive Consequences
 
 * removes the dependencies on Oracle JDK Licensing
 * reduces security vulnerabilities of older JDK versions
-Java 7 is still in predominant use. It goes without saying that any version of Java below 7 should be updated immediately—even version 7 needs significant remediation for its fleet of vulnerabilities.
+Java 7 is still in predominant use. It goes without saying that any version of Java below 7 should be updated immediately even version 7 needs significant remediation for its fleet of vulnerabilities.
 
 Further vulnerabilities - <https://www.cvedetails.com/product/19117/Oracle-JRE.html?vendor_id=93>
 
-### Negative Consequences <!-- optional -->
+### Negative Consequences
 
 * slow performance may occur
-* migration issues may occur
+* migration issues will need to be addressed
 
-## Pros and Cons of the Options <!-- optional -->
-
-### [option 1]
-
-[example | description | pointer to more information | ...] <!-- optional -->
-
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* ... <!-- numbers of pros and cons can vary -->
-
-### [option 2]
-
-[example | description | pointer to more information | ...] <!-- optional -->
-
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* ... <!-- numbers of pros and cons can vary -->
-
-### [option 3]
-
-[example | description | pointer to more information | ...] <!-- optional -->
-
-* Good, because [argument a]
-* Good, because [argument b]
-* Bad, because [argument c]
-* ... <!-- numbers of pros and cons can vary -->
-
-## Links <!-- optional -->
+## Links
 
 * Infrastructure SMT Confluence space about  OracleJDK vs OpenJDK  last edits circa March 2019.
 
@@ -106,19 +77,15 @@ Further vulnerabilities - <https://www.cvedetails.com/product/19117/Oracle-JRE.h
 
 <https://www.oracle.com/technetwork/java/javase/overview/oracle-jdk-faqs.html>
 
-"The previous Oracle Java SE license model had several options – some free under the Binary Code License (BCL) and some paid under Oracle commercial terms. To simplify and provide full licensing transparency and clarity, Oracle as of Java 9 provides two distinct Java releases:
+"The previous Oracle Java SE license model had several options - some free under the Binary Code License (BCL) and some paid under Oracle commercial terms. To simplify and provide full licensing transparency and clarity, Oracle as of Java 9 provides two distinct Java releases:
 
 Oracle OpenJDK releases under the open source GNU General Public License v2, with the Classpath Exception (GPLv2+CPE) (since Java 9),
 and Oracle Java SE product releases, which includes the Oracle JDK for Java 8 and later, and Oracle JRE with Java Web Start in Java 8, under the OTN License Agreement for Java SE. This license permits personal use, development, testing, prototyping, demonstrating and some other uses at no cost.
-If you are an organization used to getting Oracle Java SE binaries at no cost, you can simply continue doing so with Oracle's OpenJDK releases available at jdk.java.net. If you are used to getting Oracle Java SE binaries at no cost as a personal user or for development use, then you can continue to get Oracle Java SE releases through java.com (personal users) and the Oracle Technology Network (OTN) (developers). Those wishing to use the Oracle JDK or Oracle JRE for other uses will require a Java SE Subscription. Supported customers of Oracle products can continue to get their Oracle Java SE binaries from My Oracle Support (MOS) or Oracle Software Delivery Cloud (customers), and other locations."
+If you are an organization used to getting Oracle Java SE binaries at no cost, you can simply continue doing so with Oracles OpenJDK releases available at jdk.java.net. If you are used to getting Oracle Java SE binaries at no cost as a personal user or for development use, then you can continue to get Oracle Java SE releases through java.com (personal users) and the Oracle Technology Network (OTN) (developers). Those wishing to use the Oracle JDK or Oracle JRE for other uses will require a Java SE Subscription. Supported customers of Oracle products can continue to get their Oracle Java SE binaries from My Oracle Support (MOS) or Oracle Software Delivery Cloud (customers), and other locations."
 
-NOTE: Many third-party software vendors beside Oracle develop, test and certify their software for Oracle JDK and recommend its use to run their applications. Your application vendor may have an ISV agreement with Oracle to provide you with Java updates to run the application vendor’s product. If this is the case, you will not need a separate license from Oracle for Java running on the application. Please contact your application vendor to determine whether your application vendor is authorized to distribute Java to you with their application.
+NOTE: Many third-party software vendors beside Oracle develop, test and certify their software for Oracle JDK and recommend its use to run their applications. Your application vendor may have an ISV agreement with Oracle to provide you with Java updates to run the application vendors product. If this is the case, you will not need a separate license from Oracle for Java running on the application. Please contact your application vendor to determine whether your application vendor is authorized to distribute Java to you with their application.
 
 ## Decision
 
-What is the change that we're proposing and/or doing?
-The change that we're proposing or have agreed to implement.
-
-## Consequences
-
-What becomes easier or more difficult to do and any risks introduced by the change that will need to be mitigated.
+* Migrate all Java JDK dependencies from Oracle JDK to OpenJDK
+* upgrade all older versions to at least JDK 9
