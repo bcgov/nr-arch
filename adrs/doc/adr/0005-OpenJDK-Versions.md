@@ -106,7 +106,7 @@ Further vulnerabilities - <https://www.cvedetails.com/product/19117/Oracle-JRE.h
 
 <https://www.oracle.com/technetwork/java/javase/overview/oracle-jdk-faqs.html>
 
-"The previous Oracle Java SE license model had several options – some free under the Binary Code License (“BCL”) and some paid under Oracle commercial terms. To simplify and provide full licensing transparency and clarity, Oracle as of Java 9 provides two distinct Java releases:
+"The previous Oracle Java SE license model had several options – some free under the Binary Code License (BCL) and some paid under Oracle commercial terms. To simplify and provide full licensing transparency and clarity, Oracle as of Java 9 provides two distinct Java releases:
 
 Oracle OpenJDK releases under the open source GNU General Public License v2, with the Classpath Exception (GPLv2+CPE) (since Java 9),
 and Oracle Java SE product releases, which includes the Oracle JDK for Java 8 and later, and Oracle JRE with Java Web Start in Java 8, under the OTN License Agreement for Java SE. This license permits personal use, development, testing, prototyping, demonstrating and some other uses at no cost.
