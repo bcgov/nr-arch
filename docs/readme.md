@@ -75,7 +75,7 @@ See above, lists the adrs.
 ### Serving the adrs
 
 If you want the ADRs to be served on a webpage, please look for the python package [adr-viewer](https://pypi.org/project/adr-viewer/
-
+```
 Usage: adr-viewer [OPTIONS]
 
 Options:
@@ -83,7 +83,7 @@ Options:
   --output TEXT    File to write output to.  [default: index.html]
   --serve          Serve content at http://localhost:8000/
   --help           Show this message and exit.
-
+```
 ## Source, contribution
 
 The source code is available on [bitbucket](https://bitbucket.org/tinkerer_/adr-tools-python/). If you're interested in collaborating let me know, and/or send a merge request.
