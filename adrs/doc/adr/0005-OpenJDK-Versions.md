@@ -10,9 +10,9 @@ Proposed
 
 This is a response from IITD Architecture to the IITD Infrastructure Team, and others, for an Official Statement on OpenJDK positioning.
 
-* Status: accepted
+* Status: proposed
 * Deciders: Licence Change
-* Date: 2020-04-01
+* Date: 2020-04-24
 
 Technical Story: [description | <https://apps.nrs.gov.bc.ca/int/jira/browse/ARCH-62]>
 
