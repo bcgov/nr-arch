@@ -1,10 +1,10 @@
 # 5. OpenJDK
 
-Date: 2020-04-16
+Date: 2020-04-24
 
 ## Status
 
-Accepted
+Proposed
 
 ## Context
 
@@ -86,4 +86,4 @@ and Oracle Java SE product releases, which includes the Oracle JDK for Java 8 an
 ## Decision
 
 * Migrate all Java JDK dependencies from Oracle JDK to OpenJDK
-* upgrade all older versions to at least JDK 9
+* upgrade all older versions to at least JDK 9, preference is encourage teams to target move to JDK 11
