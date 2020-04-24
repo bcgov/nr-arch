@@ -62,7 +62,10 @@ depending on the archive type.
 * reduces security vulnerabilities of older JDK versions
 Java 7 is still in predominant use. It goes without saying that any version of Java below 7 should be updated immediately even version 7 needs significant remediation for its fleet of vulnerabilities.
 
-Further vulnerabilities - <https://www.cvedetails.com/product/19117/Oracle-JRE.html?vendor_id=93>
+Further vulnerabilities - 
+•	<https://www.cvedetails.com/product/19117/Oracle-JRE.html?vendor_id=93> 
+•	<https://www.cvedetails.com/product/23642/Oracle-Openjdk.html?vendor_id=93> 
+
 
 ### Negative Consequences
 
