@@ -63,7 +63,7 @@
     </head>
     <body>
         <header>
-            <h1>Natural Resources Ministries Architecture Decision Records</h1>
+            <h1>ADR Viewer - adrs</h1>
         </header>
         <div class="panel-group">
             

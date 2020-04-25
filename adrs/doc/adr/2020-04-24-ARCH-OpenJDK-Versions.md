@@ -1,4 +1,4 @@
-# 5. OpenJDK
+# 2020-04-24. ARCH OpenJDK
 
 Date: 2020-04-24
 

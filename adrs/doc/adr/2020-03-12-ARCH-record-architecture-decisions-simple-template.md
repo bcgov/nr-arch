@@ -1,6 +1,6 @@
-# 1. Record architecture decisions Simple Template
+# 2020-03-12. ARCH Record architecture decisions Simple Template
 
-Date: 2020-03-14
+Date: 2020-03-12
 
 ## Status
 
