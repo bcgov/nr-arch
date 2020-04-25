@@ -84,6 +84,8 @@ Options:
   --serve          Serve content at http://localhost:8000/
   --help           Show this message and exit.
 ```
+Note: Run adr-viewer in the following directory \nr-arch\adrs>adr-viewer (QA Index.html generated and move to \docs)
+
 ## Source, contribution
 
 The source code is available on [bitbucket](https://bitbucket.org/tinkerer_/adr-tools-python/). If you're interested in collaborating let me know, and/or send a merge request.
