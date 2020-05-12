@@ -1,5 +1,12 @@
 # Natural Resource Ministries Architecture Team
 
+## Architectural Records of Decision Index
+https://bcgov.github.io/nr-arch/
+
+## How To's 
+[Architectural Decision Records (ADRs) for Natural Resource Ministries (NRM)](https://github.com/bcgov/nr-arch/blob/master/docs/readme.md)
+
+
 ## NRM's Technology Radar
 The intent of our use of a Technology Radar is to provide a visualisation on the technology landscape in use in the Natural Resource Ministries in the BC Government.  We built this radar in the open because we anticipate that we will have a wide audience both inside and outside our organization with interest in the content.  Additionally, it enables us to use the [Thoughtworks](https://www.thoughtworks.com/radar/byor) service that generates the visualisation.
 
@@ -39,9 +46,4 @@ A. Common causes for this happening are:
 * Bad Escaping
 * Can only have 4 quadrants
 
-## Architectural Records of Decision Index
-https://bcgov.github.io/nr-arch/
 
-
-## How To's 
-[Architectural Decision Records (ADRs) for Natural Resource Ministries (NRM)](https://github.com/bcgov/nr-arch/blob/master/docs/readme.md)
