@@ -23,15 +23,15 @@ Items in our Tech Radar have an expectation that is should be followed where app
 
 _CSV source data:_(https://github.com/bcgov/nr-arch/blob/master/docs/IIT-TechnologyRadar.csv)
 
-### How is the radar built
+#### How is the radar built
 We use [Thoughtworks Tech Radar](https://radar.thoughtworks.com/) to generate our Tech Radar. The radar is backed by a single CSV file (that should nicely [render](https://help.github.com/en/github/managing-files-in-a-repository/rendering-csv-and-tsv-data)). CSV files are parsed using d3.js so please see their [documentation](https://d3-wiki.readthedocs.io/zh_CN/master/CSV/) for escaping rules. All changes to the Tech Radar should be completed via a PR and merged by someone from IIT Architecture team.
 
-### Who builds the radar?
+#### Who builds the radar?
 Our tech radar is open for anyone to contribute.
 
 Contributions are reviewed by IIT Architecture and/or NRM governance groups like [Technology Architecture Council](https://nrm.sp.gov.bc.ca/sites/NRM/arb/SitePages/Home.aspx) or [Data Architecture Council](https://nrm.sp.gov.bc.ca/sites/NRM/arb/SitePages/Home.aspx) as required.
 
-### Frequently Asked Questions on Tech Radar
+#### Frequently Asked Questions on Tech Radar
 Q. It won't display prpoperly. Help!
 A. Common causes for this happening are:
 * Leaving blank lines at the bottom (make sure they are removed)
