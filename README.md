@@ -8,6 +8,8 @@ https://bcgov.github.io/nr-arch/
 
 
 ## NRM's Technology Radar
+[Technology Radar visualization](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%2Fbcgov%2Fnr-arch%2Fmaster%2Fdocs%2FIIT-TechnologyRadar.csv)
+
 The intent of our use of a Technology Radar is to provide a visualisation on the technology landscape in use in the Natural Resource Ministries in the BC Government.  We built this radar in the open because we anticipate that we will have a wide audience both inside and outside our organization with interest in the content.  Additionally, it enables us to use the [Thoughtworks](https://www.thoughtworks.com/radar/byor) service that generates the visualisation.
 
 Items on the tech radar are only captured if the cost of change is high, or the benefits of standardizing are for the good our organization or our client ministries.
