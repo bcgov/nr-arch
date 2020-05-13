@@ -39,7 +39,7 @@ Our tech radar is open for anyone to contribute.
 Contributions are reviewed by IIT Architecture and/or NRM governance groups like [Technology Architecture Council](https://nrm.sp.gov.bc.ca/sites/NRM/arb/SitePages/Home.aspx) or [Data Architecture Council](https://nrm.sp.gov.bc.ca/sites/NRM/arb/SitePages/Home.aspx) as required.
 
 #### Frequently Asked Questions on Tech Radar
-Q. It won't display prpoperly. Help!
+Q. It won't display properly. Help!
 A. Common causes for this happening are:
 * Leaving blank lines at the bottom (make sure they are removed)
 * Forgetting to add column (verify by viewing it in Github's CSV display)
