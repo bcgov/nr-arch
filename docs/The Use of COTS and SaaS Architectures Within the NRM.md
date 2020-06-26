@@ -1,5 +1,11 @@
 
-# The Use of COTS and SaaS Architectures Within the NRM
+---
+layout: default
+title: 2020-04-24. On The Use of COTS and SaaS Architectures Within the NRM
+parent: index
+has_children: false
+---
+# On The Use of COTS and SaaS Architectures Within the NRM
 
 ### How to contribute
 Government employees, public and members of the private sector are encouraged to contribute to the repository by **forking and submitting a pull request**. 
