@@ -9,7 +9,7 @@ has_children: true
 {% include toc.html html=content %}
 </script>
 
-IITD Architecture Decision Record Index
+[IITD Architecture Decision Record Index](https://bcgov.github.io/nr-arch/)
 
 ## Architectural Decision Records (ADR) for Natural Resource Ministries (NRM)
 
