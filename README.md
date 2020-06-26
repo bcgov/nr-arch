@@ -1,6 +1,7 @@
 # Natural Resource Ministries Architecture Team
 
 ## Architectural Records of Decision Index
+
 https://bcgov.github.io/nr-arch/
 
 ## How To's 
@@ -30,7 +31,7 @@ For each item, we position it in one of four states: __Note:__ _The ring names a
 
 Items in our Tech Radar have an expectation that is should be followed where appropriate.  [Technology Radar visualization](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%2Fbcgov%2Fnr-arch%2Fmaster%2Fdocs%2FIIT-TechnologyRadar.csv)
 
-_CSV source data:_(https://github.com/bcgov/nr-arch/blob/master/docs/IIT-TechnologyRadar.csv)
+_CSV source data:_(<https://github.com/bcgov/nr-arch/blob/master/docs/IIT-TechnologyRadar.csv)>
 
 #### How is the radar built
 We use [Thoughtworks Tech Radar](https://radar.thoughtworks.com/) to generate our Tech Radar. The radar is backed by a single CSV file (that should nicely [render](https://help.github.com/en/github/managing-files-in-a-repository/rendering-csv-and-tsv-data)). CSV files are parsed using d3.js so please see their [documentation](https://d3-wiki.readthedocs.io/zh_CN/master/CSV/) for escaping rules. All changes to the Tech Radar should be completed via a PR and merged by someone from IIT Architecture team.
@@ -43,9 +44,8 @@ Contributions are reviewed by IIT Architecture and/or NRM governance groups like
 #### Frequently Asked Questions on Tech Radar
 Q. It won't display properly. Help!
 A. Common causes for this happening are:
+
 * Leaving blank lines at the bottom (make sure they are removed)
 * Forgetting to add column (verify by viewing it in Github's CSV display)
 * Bad Escaping
 * Can only have 4 quadrants
-
-
