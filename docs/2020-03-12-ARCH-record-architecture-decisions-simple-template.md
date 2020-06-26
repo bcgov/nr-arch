@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 2020-03-12. ARCH Record architecture decisions Simple Template
+parent: IITD Architecture Decision Record Index
 nav_order: 1
 has_children: false
 ---
