@@ -1,8 +1,7 @@
 ---
 layout: default
-title:  2020-04-16. ARCH Liferay Community Edition
+title: 2020-04-16. ARCH Liferay Community Edition
 parent: index
-
 has_children: false
 ---
 # 2020-04-16. ARCH Liferay Community Edition

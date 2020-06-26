@@ -2,7 +2,6 @@
 layout: default
 title: 2020-03-14. ARCH Record architecture decisions Detailed Template
 parent: index
-
 has_children: false
 ---
 # 2020-03-14. ARCH Record architecture decisions Detailed Template
