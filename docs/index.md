@@ -2,9 +2,10 @@
 layout: default
 title: IITD Architecture Decision Record Index
 nav_order: 1
-{% include toc.html html=content %}
----
 
+---
+{:toc}
+IITD Architecture Decision Record Index
 ## Architectural Decision Records (ADR) for Natural Resource Ministries (NRM)
 
 
