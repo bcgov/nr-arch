@@ -1,3 +1,10 @@
+---
+layout: default
+title: 2020-03-12. ARCH Record architecture decisions Simple Template
+nav_order: 1
+has_children: false
+---
+
 # 2020-03-12. ARCH Record architecture decisions Simple Template
 
 Date: 2020-03-12

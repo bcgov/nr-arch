@@ -1,0 +1,29 @@
+remote_theme: "webgismd/just-the-docs"
+#theme: "just-the-docs"
+aux_links:
+  "Edit on Github":
+    - "//github.com/bcgov/nr-arch/"
+    
+footer_content: "<a href='https://gov.bc.ca/'>
+  <img 
+    src='assets/images/BCID_H_rgb_pos.png' 
+    height='42' 
+    width='200' 
+    style='display: block; margin-left: auto;margin-right: auto;width: 50%;' 
+    alt='BC Gov'/> 
+</a>"
+
+header_content: "<a href='https://gov.bc.ca/'>
+  <img 
+    src='assets/images/BCID_H_rgb_pos.png' 
+    height='42' 
+    width='200' 
+    style='display: block; margin-left: auto;margin-right: auto;width: 50%;' 
+    alt='BC Gov'/> 
+</a>"
+
+heading_anchors: true
+#color_scheme: "dark"
+
+# Set a path/url to a logo that will be displayed instead of the title
+logo: "/assets/images/BCID_H_rgb_pos.png"
