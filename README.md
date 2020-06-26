@@ -5,7 +5,7 @@
 https://bcgov.github.io/nr-arch/
 
 ## How To's 
-[Architectural Decision Records (ADRs) for Natural Resource Ministries (NRM)](https://github.com/bcgov/nr-arch/blob/master/docs/readme.md)
+[Architectural Decision Records (ADRs) for Natural Resource Ministries (NRM)](https://github.com/bcgov/nr-arch/blob/master/docs/index.md)
 
 
 ## NRM's Technology Radar
