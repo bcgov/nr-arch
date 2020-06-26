@@ -17,9 +17,9 @@ accepted
 The issue motivatina# [short title of solved problem and solution]
 What is the issue that we're seeing that is motivating this decision or change?
 
-* Status: [proposed | rejected | accepted | deprecated | ... | superseded by [ADR-0005](0005-example.md)] <!-- optional -->
-* Deciders: [list everyone involved in the decision] <!-- optional -->
-* Date: [YYYY-MM-DD when the decision was last updated] <!-- optional -->
+  * Status: [proposed | rejected | accepted | deprecated | ... | superseded by [ADR-0005](0005-example.md)] <!-- optional -->
+  * Deciders: [list everyone involved in the decision] <!-- optional -->
+  * Date: [YYYY-MM-DD when the decision was last updated] <!-- optional -->
 
 Technical Story: [description | ticket/issue URL] <!-- optional -->
 
@@ -29,16 +29,16 @@ Technical Story: [description | ticket/issue URL] <!-- optional -->
 
 ## Decision Drivers <!-- optional -->
 
-* [driver 1, e.g., a force, facing concern, ...]
-* [driver 2, e.g., a force, facing concern, ...]
-* ... <!-- numbers of drivers can vary -->
+  * [driver 1, e.g., a force, facing concern, ...]
+  * [driver 2, e.g., a force, facing concern, ...]
+  * ... <!-- numbers of drivers can vary -->
 
 ## Considered Options
 
-* [option 1]
-* [option 2]
-* [option 3]
-* ... <!-- numbers of options can vary -->
+  * [option 1]
+  * [option 2]
+  * [option 3]
+  * ... <!-- numbers of options can vary -->
 
 ## Decision Outcome
 
