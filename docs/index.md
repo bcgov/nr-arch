@@ -1,6 +1,6 @@
 ---
 layout: default
-title: IITD Architecture Decision Record Index
+title: index
 
 has_children: true
 ---
