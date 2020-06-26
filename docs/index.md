@@ -1,12 +1,12 @@
 ---
 layout: default
 title: IITD Architecture Decision Record Index
-nav_order: 1
+
 has_children: true
 ---
 
 <script>
-{:toc}
+{% include toc.html html=content %}
 </script>
 
 IITD Architecture Decision Record Index
