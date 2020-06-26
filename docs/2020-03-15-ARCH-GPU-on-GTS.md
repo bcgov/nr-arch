@@ -1,3 +1,10 @@
+---
+layout: default
+title: 2020-03-14. ARCH Gpu on gts
+parent: index
+
+has_children: false
+---
 # 2020-03-14. ARCH Gpu on gts
 
 Date: 2020-03-14
