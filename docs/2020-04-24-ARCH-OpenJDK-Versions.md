@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 2020-04-24. ARCH OpenJDK
-nav_order: 1
+parent: index
 has_children: false
 ---
 # 2020-04-24. ARCH OpenJDK
