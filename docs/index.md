@@ -36,6 +36,7 @@ Where are the ADRs stored?
 1. Owned by the project/product architecture owner 
 2. within the project code repository ADRs should be stored in the docs/adrs subdirectory (to be curated/discoverable by a broader audience)
 3. ADRs with the docs/adrs subdirectory within GitHub BCGOV repos will be currated and referenced in this repository
-4. for non-agile teams, 
+4. for non-agile teams, ADRs will be stored here. 
+
 
 NOTE: This page uses a Jeykll template. Jekyll is a static site generator. You give it text written in your favorite markup language and it uses layouts to create a static website dynamically after each git respository commit. This repo is intended as a curation as well as a template for teams to re-use.
