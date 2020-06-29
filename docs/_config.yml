@@ -25,5 +25,7 @@ header_content: "<a href='https://gov.bc.ca/'>
 heading_anchors: true
 #color_scheme: "dark"
 
+search_enabled: true
+
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/BCID_H_rgb_pos.png"
