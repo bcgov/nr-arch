@@ -27,6 +27,8 @@ heading_anchors: true
 
 search_enabled: true
 search.button: true
+search.rel_url: true
+search.heading_level: 1
 
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/BCID_H_rgb_pos.png"
