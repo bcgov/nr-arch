@@ -9,5 +9,5 @@ https://bcgov.github.io/nr-arch/
 
 
 ## NRM's Technology Radar
-[Technology Radar details](docs/TechRadar/index.md)
+[Technology Radar details](docs/TechRadar/TechRadar.md)
 
