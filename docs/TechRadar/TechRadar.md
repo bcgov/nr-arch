@@ -1,5 +1,5 @@
 ## NRM's Technology Radar
-[Technology Radar visualization](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%2Fbcgov%2Fnr-arch%2Fmaster%2Fdocs%2FIIT-TechnologyRadar.csv)
+[Technology Radar visualization](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%2Fbcgov%2Fnr-arch%2Fmaster%2Fdocs%2FTechRadar%2FIIT-TechnologyRadar.csv)
 
 The intent of our use of a Technology Radar is to provide a visualisation on the technology landscape in use in the Natural Resource Ministries in the BC Government.  We built this radar in the open because we anticipate that we will have a wide audience both inside and outside our organization with interest in the content.  Additionally, it enables us to use the [Thoughtworks](https://www.thoughtworks.com/radar/byor) service that generates the visualisation.
 
@@ -19,9 +19,9 @@ For each item, we position it in one of four states: __Note:__ _The ring names a
 * Evaluate - technology we’re interested in but need to evaluate before recommending as the default choice. Items in this category should have a team willing to sponsor the exploration.
 * Avoid - We’ve used this technology in the past, but it’s no longer recommended. This technology could be viewed as holding us back and should be actively removed. Items in this category should have a desired removal date.
 
-Items in our Tech Radar have an expectation that is should be followed where appropriate.  [Technology Radar visualization](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%2Fbcgov%2Fnr-arch%2Fmaster%2Fdocs%2FIIT-TechnologyRadar.csv)
+Items in our Tech Radar have an expectation that is should be followed where appropriate.  [Technology Radar visualization](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%2Fbcgov%2Fnr-arch%2Fmaster%2Fdocs%2FTechRadar%2FIIT-TechnologyRadar.csv)
 
-_CSV source data:_(<https://github.com/bcgov/nr-arch/blob/master/docs/IIT-TechnologyRadar.csv)>
+_CSV source data:_(<https://github.com/bcgov/nr-arch/blob/master/docs/TechRadar/IIT-TechnologyRadar.csv)>
 
 #### How is the radar built
 We use [Thoughtworks Tech Radar](https://radar.thoughtworks.com/) to generate our Tech Radar. The radar is backed by a single CSV file (that should nicely [render](https://help.github.com/en/github/managing-files-in-a-repository/rendering-csv-and-tsv-data)). CSV files are parsed using d3.js so please see their [documentation](https://d3-wiki.readthedocs.io/zh_CN/master/CSV/) for escaping rules. All changes to the Tech Radar should be completed via a PR and merged by someone from IIT Architecture team.
