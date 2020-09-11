@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 2020-04-24. ARCH OpenJDK
+title: 2020-08-27. ARCH OpenJDK
 parent: index
 has_children: false
 ---
-# 2020-04-24. ARCH OpenJDK
+# 2020-08-27. ARCH OpenJDK
 
-Date: 2020-04-24
+Date: 2020-08-27
 
 ## Status
 
@@ -18,7 +18,7 @@ This is a response from IITD Architecture to the IITD Infrastructure Team, and o
 
 * Status: proposed
 * Deciders: Licence Change
-* Date: 2020-04-24
+* Date: 2020-08-27
 
 Technical Story: [description | <https://apps.nrs.gov.bc.ca/int/jira/browse/ARCH-62]>
 
@@ -45,7 +45,7 @@ This is a response from IITD Architecture to the IITD Infrastructure Team, and o
 
 ## Decision Outcome
 
-JDK 9 & Later
+JDK 8 & Later
 Oracles OpenJDK JDK binaries for Windows, macOS, and Linux are available on release-specific pages of jdk.java.net as .tar.gz or .zip archives.
 
 As an example, the archives for JDK 13 may be found on jdk.java.net/13 and may be extracted on the command line using
@@ -91,5 +91,5 @@ and Oracle Java SE product releases, which includes the Oracle JDK for Java 8 an
 
 ## Decision
 
-* Migrate all Java JDK dependencies from Oracle JDK to OpenJDK
-* upgrade all older versions to at least JDK 9, preference is encourage teams to target move to JDK 11
+* Migrate all Java JDK dependencies from Oracle JDK to OpenJDK.
+* Upgrade all older versions to at least JDK 8, preference is to encourage teams to target move to JDK 11.
