@@ -14,7 +14,7 @@ subnav:
   - text: 2020-04-16-arch-liferay-community-edition
     href: https://bcgov.github.io/nr-arch/adrs/2020-04-16-arch-liferay-community-edition
   - text: 2020-08-27. ARCH OpenJDK
-    href: /adrs/2020-04-24-arch-openjdk-versions
+    href: https://bcgov.github.io/nr-arch/adrs/2020-04-24-arch-openjdk-versions
     
 ---
 An architecture decision record (ADR) is a document that captures an important architectural decision made along with its context and consequences. An architecture decision (AD) is a software design choice that addresses a significant requirement.
