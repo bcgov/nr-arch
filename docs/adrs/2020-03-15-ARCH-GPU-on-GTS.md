@@ -1,10 +1,10 @@
 ---
-layout: post
-sidenav: docs
 title: 2020-03-14. ARCH Gpu on gts
 parent: index
 has_children: false
-permalink: 2020-03-15-arch-gpu-on-gts
+layout: post
+sidenav: docs
+permalink: /adrs/2020-03-15-arch-gpu-on-gts
 
 ---
 

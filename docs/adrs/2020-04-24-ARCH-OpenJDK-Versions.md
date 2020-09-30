@@ -1,12 +1,10 @@
 ---
-
-sidenav: docs
 title: 2020-08-27. ARCH OpenJDK
-parent: adrs
+parent: index
 has_children: false
 layout: post
 sidenav: docs
-permalink: 2020-04-24-arch-openjdk-versions
+permalink: /adrs/2020-04-24-arch-openjdk-versions
 ---
 # 2020-08-27. ARCH OpenJDK
 

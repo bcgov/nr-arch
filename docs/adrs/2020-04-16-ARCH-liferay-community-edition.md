@@ -1,10 +1,10 @@
 ---
-layout: post
-sidenav: docs
 title: 2020-04-16. ARCH Liferay Community Edition
 parent: index
 has_children: false
-permalink: 2020-04-16-arch-liferay-community-edition
+layout: post
+sidenav: docs
+permalink: /adrs/2020-04-16-arch-liferay-community-edition
 ---
 
 

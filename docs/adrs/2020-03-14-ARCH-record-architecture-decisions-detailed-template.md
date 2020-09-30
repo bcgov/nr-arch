@@ -1,9 +1,10 @@
 ---
-layout: post
-sidenav: docs
 title: 2020-03-14. ARCH Record architecture decisions Detailed Template
 parent: index
-permalink: 2020-03-14-arch-record-architecture-decisions-detailed-template
+has_children: false
+layout: post
+sidenav: docs
+permalink: /adrs/2020-03-14-arch-record-architecture-decisions-detailed-template
 
 ---
 
