@@ -6,7 +6,7 @@ layout: post
 sidenav: docs
 permalink: /adrs/2020-04-24-arch-openjdk-versions
 ---
-# 2020-08-27. ARCH OpenJDK
+
 
 Date: 2020-08-27
 
