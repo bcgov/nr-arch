@@ -53,14 +53,15 @@ footnotes:
 adrs:
   - text: Architectural Decision Records
     href: /adrs
-  - text: 2020-03-12-ARCH-record-architecture-decisions-simple-template
-    href: https://github.com/bcgov/nr-arch/adrs/2020-03-12-ARCH-record-architecture-decisions-simple-template
-  - text: 2020-03-14-ARCH-record-architecture-decisions-detailed-template
-    href: https://github.com/bcgov/nr-arch/adrs/2020-03-14-ARCH-record-architecture-decisions-detailed-template
-  - text: 2020-03-15-ARCH-GPU-on-GTS
-    href: https://github.com/bcgov/nr-arch/adrs/2020-03-15-ARCH-GPU-on-GTS
-  - text: 2020-04-16-ARCH-liferay-community-edition
-    href: https://github.com/bcgov/nr-arch/adrs/2020-04-16-ARCH-liferay-community-edition
+  - text: 2020-03-12-arch-record-architecture-decisions-simple-template
+    href: https://github.com/bcgov/nr-arch/adrs/2020-03-12-arch-record-architecture-decisions-simple-template
+  - text: 2020-03-14-arch-record-architecture-decisions-detailed-template
+    href: https://github.com/bcgov/nr-arch/adrs/2020-03-14-arch-record-architecture-decisions-detailed-template
+  - text: 2020-03-15-arch-gpu-on-gts
+    href: https://github.com/bcgov/nr-arch/adrs/2020-03-15-arch-gpu-on-gts
+  - text: 2020-04-16-arch-liferay-community-edition
+    href: https://github.com/bcgov/nr-arch/adrs/2020-04-16-arch-liferay-community-edition
+    
 
 
 
