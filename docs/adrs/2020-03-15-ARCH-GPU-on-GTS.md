@@ -4,8 +4,10 @@ sidenav: docs
 title: 2020-03-14. ARCH Gpu on gts
 parent: index
 has_children: false
+permalink: 2020-03-15-arch-gpu-on-gts
+
 ---
-# 2020-03-14. ARCH Gpu on gts
+
 
 Date: 2020-03-14
 

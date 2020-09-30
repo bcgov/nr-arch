@@ -4,8 +4,9 @@ sidenav: docs
 title: 2020-04-16. ARCH Liferay Community Edition
 parent: index
 has_children: false
+permalink: 2020-04-16-arch-liferay-community-edition
 ---
-# 2020-04-16. ARCH Liferay Community Edition
+
 
 Date: 2020-04-16
 

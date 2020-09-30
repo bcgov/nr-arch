@@ -1,11 +1,12 @@
 ---
-layout: post
+
 sidenav: docs
 title: 2020-08-27. ARCH OpenJDK
 parent: adrs
 has_children: false
 layout: post
 sidenav: docs
+permalink: 2020-04-24-arch-openjdk-versions
 ---
 # 2020-08-27. ARCH OpenJDK
 

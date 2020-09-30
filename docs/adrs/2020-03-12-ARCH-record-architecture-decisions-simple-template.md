@@ -9,7 +9,7 @@ permalink: /adrs/2020-03-12-arch-record-architecture-decisions-simple-template
 
 ---
 
-# 2020-03-12. ARCH Record architecture decisions Simple Template
+
 
 Date: 2020-03-12
 

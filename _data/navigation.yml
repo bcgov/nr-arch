@@ -61,6 +61,8 @@ adrs:
     href: https://github.com/bcgov/nr-arch/adrs/2020-03-15-arch-gpu-on-gts
   - text: 2020-04-16-arch-liferay-community-edition
     href: https://github.com/bcgov/nr-arch/adrs/2020-04-16-arch-liferay-community-edition
+  - text: 2020-04-24-arch-openjdk-versions
+    href: https://github.com/bcgov/nr-arch/adrs/2020-04-24-arch-openjdk-versions
     
 
 

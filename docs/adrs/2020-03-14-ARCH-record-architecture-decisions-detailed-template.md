@@ -3,9 +3,10 @@ layout: post
 sidenav: docs
 title: 2020-03-14. ARCH Record architecture decisions Detailed Template
 parent: index
-has_children: false
+permalink: 2020-03-14-arch-record-architecture-decisions-detailed-template
+
 ---
-# 2020-03-14. ARCH Record architecture decisions Detailed Template
+
 
 Date: 2020-03-14
 
