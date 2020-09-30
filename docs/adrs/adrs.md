@@ -6,13 +6,13 @@ sidenav: docs
 
 subnav: 
   - text: 2020-03-12-arch-record-architecture-decisions-simple-template
-    href: https://github.com/bcgov/nr-arch/adrs/2020-03-12-arch-record-architecture-decisions-simple-template
+    href: https://bcgov.github.io/nr-arch/adrs/2020-03-12-arch-record-architecture-decisions-simple-template
   - text: 2020-03-14-arch-record-architecture-decisions-detailed-template
-    href: https://github.com/bcgov/nr-arch/adrs/2020-03-14-arch-record-architecture-decisions-detailed-template
+    href: https://bcgov.github.io/nr-arch/adrs/2020-03-14-arch-record-architecture-decisions-detailed-template
   - text: 2020-03-15-arch-gpu-on-gts
-    href: https://github.com/bcgov/nr-arch/adrs/2020-03-15-arch-gpu-on-gts
+    href: https://bcgov.github.io/nr-arch/adrs/2020-03-15-arch-gpu-on-gts
   - text: 2020-04-16-arch-liferay-community-edition
-    href: https://github.com/bcgov/nr-arch/adrs/2020-04-16-arch-liferay-community-edition
+    href: https://bcgov.github.io/nr-arch/adrs/2020-04-16-arch-liferay-community-edition
     
 ---
 An architecture decision record (ADR) is a document that captures an important architectural decision made along with its context and consequences. An architecture decision (AD) is a software design choice that addresses a significant requirement.
