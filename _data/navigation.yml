@@ -33,7 +33,7 @@ secondary:
     external: true
   - text: Provide Feedback
     href: /feedback
-    external: true
+    external: false
 
 docs:
   - text: Home
@@ -79,12 +79,12 @@ footer:
     href: https://www2.gov.bc.ca/gov/content/home/copyright
     external: true
   - text: Contact Us
-    href: https://github.com/bcgov/bcwebmaps-options/issues
+    href: https://github.com/bcgov/nr-arch/issues
     external: true
   - text: Fair Use
     href: /fairuse
   - text: Updated 30/09/2020
-    href: https://github.com/bcgov/bcwebmaps-options
+    href: https://github.com/bcgov/nr-arch
     external: true
 
 
