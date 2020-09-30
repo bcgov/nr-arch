@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: post
+sidenav: docs
 title: 2020-04-16. ARCH Liferay Community Edition
 parent: index
 has_children: false

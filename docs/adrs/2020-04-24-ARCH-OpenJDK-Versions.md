@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: post
+sidenav: docs
 title: 2020-08-27. ARCH OpenJDK
 parent: adrs
 has_children: false

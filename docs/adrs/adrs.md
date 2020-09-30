@@ -1,10 +1,9 @@
 ---
 title: Architectural Decision Records
 permalink: /adrs
-
 layout: post
 sidenav: docs
-permalink: /adrs
+
 subnav: 
   - text: 2020-03-12-arch-record-architecture-decisions-simple-template
     href: https://github.com/bcgov/nr-arch/adrs/2020-03-12-arch-record-architecture-decisions-simple-template

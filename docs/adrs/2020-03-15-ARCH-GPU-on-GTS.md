@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: post
+sidenav: docs
 title: 2020-03-14. ARCH Gpu on gts
 parent: index
 has_children: false
