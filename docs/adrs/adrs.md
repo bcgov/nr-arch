@@ -8,12 +8,16 @@ permalink: /adrs
 subnav: 
   - text: 2020-03-12-ARCH-record-architecture-decisions-simple-template
     href: /adrs/2020-03-12-ARCH-record-architecture-decisions-simple-template
+    external: false
   - text: 2020-03-14-ARCH-record-architecture-decisions-detailed-template
     href: /adrs/2020-03-14-ARCH-record-architecture-decisions-detailed-template
+    external: false
   - text: 2020-03-15-ARCH-GPU-on-GTS
     href: /adrs/2020-03-15-ARCH-GPU-on-GTS
+    external: false
   - text: 2020-04-16-ARCH-liferay-community-edition
     href: /adrs/2020-04-16-ARCH-liferay-community-edition
+    external: false
 
 ---
 An architecture decision record (ADR) is a document that captures an important architectural decision made along with its context and consequences. An architecture decision (AD) is a software design choice that addresses a significant requirement.
