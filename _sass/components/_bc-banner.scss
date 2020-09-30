@@ -1,0 +1,22 @@
+.bc-banner {
+    background-color: #003366;
+    
+    
+  .bc-banner-header {
+      color: white;
+  }
+  .bc-banner-button {
+    @if variable-exists(bc-banner-link) {
+      color: $bc-banner-link;
+    }
+    &:hover {
+      @if variable-exists(bc-banner-link-hover) {
+        color: $bc-banner-link-hover;
+      }
+    }
+  }
+  .bc-banner-content {
+      color: white;
+      
+  }
+}

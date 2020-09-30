@@ -1,0 +1,37 @@
+// Flexbox positioning to move sidenav below main content on small screens
+.bc-layout-docs {
+  
+  display: flex;
+  flex-direction: column;
+
+  @include media($large-screen) {
+    display: inherit;
+  }
+
+  .bc-grid {
+    > :first-child:not(.bc-width-*) {
+      margin-top: 0;
+    }
+
+    > :last-child:not(.bc-width-*) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.bc-layout-docs-sidenav {
+  order: 2;
+}
+
+.bc-layout-docs-main_content {
+  margin-bottom: $site-margins;
+  order: 1;
+
+  @include media($large-screen) {
+    margin-bottom: 0;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+}

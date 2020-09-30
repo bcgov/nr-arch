@@ -1,0 +1,97 @@
+# This is the configuration for the site navigation.
+
+# This file defines the structure of various named navigational
+# listings, any of which can be used (with some caveats) as the
+# links in your header, footer, and per-page side navigation.
+#
+# For instance, if you have a "primary" navigation list here, you
+# can use that as your header's primary navigation by setting
+# `primary.links` to "primary":
+#
+# primary:
+#   links: primary
+#
+
+primary:
+  - text: Home
+    href: /
+  - text: Architectural Decision Records
+    href: /adrs 
+  - text: Glossary
+    href: /glossary
+  - text: Footnotes
+    href: /footnotes
+  - text: Provide Feedback
+    href: /feedback
+
+secondary:
+  - text: Home
+    href: /
+    external: false
+  - text: GitHub Source
+    href: https://github.com/bcgov/nr-arch
+    external: true
+  - text: Provide Feedback
+    href: /feedback
+    external: true
+
+docs:
+  - text: Home
+    href: /
+  - text: Architectural Decision Records
+    href: /adrs
+  - text: Glossary
+    href: /glossary
+  - text: Provide Feedback
+    href: /feedback
+
+    
+footnotes:
+  - text: Footnotes
+    href: /footnotes
+
+adrs:
+  - text: Architectural Decision Records
+    href: /adrs
+  - text: 2020-03-12-ARCH-record-architecture-decisions-simple-template
+    href: /adrs/2020-03-12-ARCH-record-architecture-decisions-simple-template
+  - text: 2020-03-14-ARCH-record-architecture-decisions-detailed-template
+    href: /adrs/2020-03-14-ARCH-record-architecture-decisions-detailed-template
+  - text: 2020-03-15-ARCH-GPU-on-GTS
+    href: /adrs/2020-03-15-ARCH-GPU-on-GTS
+  - text: 2020-04-16-ARCH-liferay-community-edition
+    href: /adrs/2020-04-16-ARCH-liferay-community-edition
+
+
+footer:
+  - text: Home
+    href: /
+  - text: Disclaimer
+    href: https://www2.gov.bc.ca/gov/content/home/disclaimer
+    external: true
+  - text: Privacy
+    href: https://www2.gov.bc.ca/gov/content/home/privacy
+    external: true
+  - text: Accessibility
+    href: https://www2.gov.bc.ca/gov/content/home/accessible-government
+    external: true
+  - text: Copyright
+    href: https://www2.gov.bc.ca/gov/content/home/copyright
+    external: true
+  - text: Contact Us
+    href: https://github.com/bcgov/bcwebmaps-options/issues
+    external: true
+  - text: Fair Use
+    href: /fairuse
+  - text: Updated 30/09/2020
+    href: https://github.com/bcgov/bcwebmaps-options
+    external: true
+
+
+maintenanceanddevelopment:
+  - text: Maintenance and Development
+    href: /maintenanceanddevelopment
+
+feedback:
+  - text: Provide Feedback
+    href: /feedback

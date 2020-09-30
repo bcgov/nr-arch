@@ -1,0 +1,24 @@
+.bc-header,
+.bc-sidenav-list {
+  @include media($nav-width) {
+    .bc-button {
+      margin: 0;
+      width: auto;
+    }
+  }
+  .bc-button {
+    color: $color-white;
+    padding: 1rem;
+    &:hover {
+      background-color: $color-primary-darker;
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+}
+.bc-sidenav-list,
+.bc-footer-nav .bc-footer-primary-content {
+  .bc-button {
+    margin: 1rem 0;
+  }
+}

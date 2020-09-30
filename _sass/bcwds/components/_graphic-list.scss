@@ -1,0 +1,35 @@
+// A collection of media block objects
+
+.bc-graphic_list {
+  .bc-graphic_list-row {
+    .bc-media_block {
+      margin-bottom: $site-margins;
+
+      @include media($medium-screen) {
+        margin-bottom: $site-margins * 2;
+      }
+    }
+
+    &:last-child {
+      .bc-media_block {
+        @include media($medium-screen) {
+          margin-bottom: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .bc-media_block-img {
+    margin-right: $site-margins;
+  }
+
+  .bc-media_block-body {
+    > :first-child {
+      margin-top: 0;
+    }
+  }
+}

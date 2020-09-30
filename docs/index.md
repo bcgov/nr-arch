@@ -1,16 +1,17 @@
 ---
-layout: default
-title: index
+title: Architectural Decision Records (ADR) for Natural Resource Ministries (NRM)
+description: This is a main page.
+permalink: /
 
-has_children: true
+layout: post
+sidenav: docs
+subnav:
+  - text: Guidance
+    href: '#Guidance'
+  
+
 ---
 
-<script>
-{% include toc.html html=content %}
-</script>
-
-
-## [Architectural Decision Records (ADR) Index for Natural Resource Ministries (NRM)](https://bcgov.github.io/nr-arch/)
 
 An architecture decision record (ADR) is a document that captures an important architectural decision made along with its context and consequences. An architecture decision (AD) is a software design choice that addresses a significant requirement.
 

@@ -1,0 +1,23 @@
+# This is the configuration for the site favicons.
+
+- rel: shortcut icon
+  type: image/ico
+  href: /assets/bcwds/img/favicons/faviconbc.png
+- rel: icon
+  type: image/png
+  href: /assets/bcwds/img/favicons/faviconbc.png
+- rel: icon
+  type: image/png
+  sizes: 192x192
+  href: /assets/bcwds/img/favicons/faviconbc.png
+- rel: apple-touch-icon-precomposed
+  href: /assets/bcwds/img/favicons/faviconbc.png
+- rel: apple-touch-icon-precomposed
+  sizes: 72x72
+  href: /assets/bcwds/img/favicons/faviconbc.png
+- rel: apple-touch-icon-precomposed
+  sizes: 114x114
+  href: /assets/bcwds/img/favicons/faviconbc.png
+- rel: apple-touch-icon-precomposed
+  sizes: 144x144
+  href: /assets/bcwds/img/favicons/faviconbc.png

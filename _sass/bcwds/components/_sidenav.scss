@@ -1,0 +1,33 @@
+
+.bc-sidenav-list {
+  @include bc-sidenav-list;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  // position: sticky; 
+  // top: 10px;
+  @include media($large-screen) {
+    border-bottom: none;
+    border-top: none;
+  }
+
+  .bc-grid & {
+    @include margin(null (-$site-margins-mobile) null (-$site-margins-mobile));
+
+    @include media($medium-screen) {
+      @include margin(null 0);
+    }
+  }
+}
+
+.bc-sidenav-sub_list {
+  @include bc-sidenav-sublist;
+  
+}
+
+.bc-layout-docs-sidenav {
+  padding-top: 10rem;
+
+  @include media($large-screen) {
+    padding-top: 0;
+  }
+}
