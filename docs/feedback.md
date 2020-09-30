@@ -3,7 +3,7 @@ title: Provide Feedback
 permalink: /feedback
 
 layout: post
-sidenav: feedback
+sidenav: docs
 subnav:
   - text: GitHub Issues
     href: '#github-issues'
