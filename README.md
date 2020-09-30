@@ -12,7 +12,7 @@ https://bcgov.github.io/nr-arch/
 [Technology Radar details](docs/TechRadar/TechRadar.md)
 
 
-## Prerequistes for making big updates on the Jekyll website and testing (smallmarkdown edits don't require this)
+## Prerequistes for making big updates on the Jekyll website and testing (small markdown edits don't require this)
 Ruby version 2.5.0 or higher, including all development headers (check your Ruby version using ruby -v)<br>
 RubyGems (check your Gems version using gem -v)<br>
 GCC and Make (check versions using gcc -v,g++ -v, and make -v)<br>
