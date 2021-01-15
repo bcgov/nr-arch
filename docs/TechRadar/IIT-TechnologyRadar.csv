@@ -75,4 +75,4 @@ Consul,explore,tools,"<p> Automate network configurations, discover services, an
 Azure Storage Services,explore,platforms,"<p> Cloud file storage in Azure </p>"
 Dell Object Store,adopt,platforms,"<p> Object Storage Service is for Ministry Clients (Hosted within Government DataCentres) to store data as objects using standard protocols including S3, NFS, and HTTP </p>"
 Microsoft OneDrive,adopt,tools,"<p> file hosting service and synchronization service operated by Microsoft which BC Government is utilizing </p>"
-MFA (MultiFactor Authentication),adopt,tools,"<p> BC Government MFA through Microsoft for extra security logging into Government Microsoft 365 products (OneDrive, Teams, Word Online, Excel Online, etc) </p>'
+MFA (MultiFactor Authentication),adopt,tools,"<p> BC Government MFA through Microsoft for extra security logging into Government Microsoft 365 products (OneDrive, Teams, Word Online, Excel Online, etc) </p>"
