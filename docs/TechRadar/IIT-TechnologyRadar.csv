@@ -72,7 +72,7 @@ Vue.js,adopt,languages and frameworks,FALSE,"<p>Vue.js is an open-source JavaScr
 WebADE,retire,languages and frameworks,FALSE,"<p>The Web Application Development Environment (WebADE) is a J2EE application framework which aides in delivering common services required by corporate applications. The focus of WebADE is to provide applications with flexible and consistent authorization services in an enterprise environment. IIT uses WebADE in a large majority of its hosted applications, and is currently assessing KeyCloak as the next evolution of authentication and authorization services.</p>"
 Vault,adopt,tools,"<p> Secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API. </p>"
 Consul,explore,tools,"<p> Automate network configurations, discover services, and enable secure connectivity across any cloud or runtime. </p>"
-Azure Storage Services,explore,platforms,"<p> Cloud file storage in Azure </p>"
+Azure Storage Services,explore,platforms,<p> Cloud file storage in Azure </p>
 Dell Object Store,adopt,platforms,"<p> Object Storage Service is for Ministry Clients (Hosted within Government DataCentres) to store data as objects using standard protocols including S3, NFS, and HTTP </p>"
-Microsoft OneDrive,adopt,tools,"<p> file hosting service and synchronization service operated by Microsoft which BC Government is utilizing </p>"
+Microsoft OneDrive,adopt,tools,<p> file hosting service and synchronization service operated by Microsoft which BC Government is utilizing </p>
 MFA (MultiFactor Authentication),adopt,tools,"<p> BC Government MFA through Microsoft for extra security logging into Government Microsoft 365 products (OneDrive, Teams, Word Online, Excel Online, etc) </p>"
