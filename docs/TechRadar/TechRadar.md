@@ -1,6 +1,6 @@
 ## NRM's Technology Radar
 
-[Technology Radar visualization v0.3 - October 2020](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%2Fbcgov%2Fnr-arch%2Fmaster%2Fdocs%2FTechRadar%2FIIT-TechnologyRadar.csv)
+[Technology Radar visualization](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%2Fbcgov%2Fnr-arch%2Fmaster%2Fdocs%2FTechRadar%2FIIT-TechnologyRadar.csv)
 
 The intent of our use of a Technology Radar is to provide a visualisation on the technology landscape in use in the Natural Resource Ministries in the BC Government.  We built this radar in the open because we anticipate that we will have a wide audience both inside and outside of our organization with interest in the content.  Additionally, it enables us to use the [Thoughtworks](https://www.thoughtworks.com/radar/byor) service that generates the visualisation.
 
@@ -19,6 +19,8 @@ __Note:__ _Our selected quadrants are currently draft and subject to change_.
 * **Platforms**. Things we build software on top of such as mobile technologies like iOS, BC Gov HPAS datacentre, OpenShift, Red Hat Linux, Windows, WSO2, Azure, and AWS.
 
 * **Languages and Frameworks**. Languages and frameworks that we use when building products.
+
+
 
 
 #### Rings
@@ -46,6 +48,8 @@ Contributions are reviewed by the IIT Architecture Team and various trusted advi
 
 
 #### Previous Versions of radar
+[October 2020 - Version 0.3](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%2Fbcgov%2Fnr-arch%2F329bb466686d0edb207751b4005b418478f449a5%2Fdocs%2FTechRadar%2FIIT-TechnologyRadar.csv)  
+
 [July 2020 - Version 0.2](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fraw.githubusercontent.com%2Fbcgov%2Fnr-arch%2F21b8c4875e181bdb9ff2c4e0e63753b7580f1789%2Fdocs%2FTechRadar%2FIIT-TechnologyRadar-V0-2.csv)
 <p>&nbsp;</p>
 
