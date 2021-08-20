@@ -1,0 +1,45 @@
+name,ring,quadrant,isNew,description
+Manage Tenures,Low Maturity,Delivery Capability,TRUE,"<p><b>ESF, FTA, RRS</b><br>System are fragile, break often, can only use IE; Systems feed RESULTS, appraisals FSP and other systems</p>"
+Manage Applications,Low Maturity,Delivery Capability,TRUE,"<p><b>ESF, FTA, RRS</b><br>System are fragile, break often, can only use IE; Systems feed RESULTS, appraisals FSP and other systems</p>"
+Scaling,Medium,Operating Capabilities,TRUE,"<p><b>SCS, FCS</p></b>"
+Export Applications,Medium-high,Delivery Capability,TRUE,"<p><b>LEXIS, RTM, CSP</b><br>LEXIS being upgraded in May; Manual workarounds exist in processes to work with LEXIS; RTM data is manually entered;
+ Org: very little documentation, some exists in EA; Direction for EA and documentation is unclear? testing is challenging;
+ Critical need to automate the RTM process; Need to make quicker changes to the system.</p>"
+Consultations,High,Delivery Capability,TRUE,<p><b>SNCS</b><br>Mostly manual processes; Informatrion sharing between proponent and FN; Information sharing becomes part of decision package; SDM reviews and decides if acceptable.</p>
+Referrals,Medium-high,Delivery Capability,TRUE,<p>Mostly process driven; mostly logged as a flag for acceptance and completeness; forms part of the recommendation to issue a tenure;</p>
+Timber Marks,Low Maturity,Operating Capabilities,TRUE,<p><b>FTA</b><br>Known issues with FTA; Needs to be upgraded or replaced;</p>
+Decisions,Low Maturity,Operating Capabilities,TRUE,"<p><b>FTA, SNCS</b><br>SOS component of SNCSC is problematic - processing conflicts, etc</p>"
+Conditions,Low Maturity,Operating Capabilities,TRUE,"<p><b>FTA, CIMS</b><br>Known issues with FTA; Needs to be upgraded or replaced;</p>"
+Apportionnement Tracking,Medium-high,Operating Capabilities,TRUE,<p><b>APT2</b><br>Meets business needs but could use enhancements and additional reports;</p>
+Competitions/Auctions,Medium-high,Operating Capabilities,TRUE,<p><b>BCTS Admin</b><br>Not entirely integrated with Forestry Suite - stand-alone; to be reviewed at a later date</p>
+Resource Management,Low Maturity,Operating Capabilities,TRUE,"<p><b>RESULTS, FSP</b><br>Systems could be improved to support additional business requirements and integration with other business areas/systems; better integration of services would be helpful. Costly, lack of IT resources, Tech (IE browser) is obsolete;
+ Org: support from IITD has been diminished, hard to get support (also HelpDesk); Expertese was pushed down to business - support going in wrong direction;</p>"
+Range use plans,Medium,Operating Capabilities,TRUE,"<p><b>MYRA</b><br>Better than MVP, but needs additional business functionality; not spatially enabled; offline capabilities not available;</p>"
+Stewardship Monitoring,Low Maturity,Operating Capabilities,TRUE,"<p><b>FREP, IAPP</b><br>Repository for entire provice for PDFs. Lacks functionality (querying) and metadata abilities; would need major upgrades;</p>"
+Invasive Species,Medium-high,Operating Capabilities,TRUE,"<p><b>InvasiveBC</b><br>Getting it to MVP within days, needs additional business functionality; Will replace IAPP; MoE is involved;</p>"
+Manage Vegetation Inventory,Medium,Operating Capabilities,TRUE,"<p><b>VRIMS, ISMC, VDYP7, TASS, TIPSY</b><br>Medium to high perfomance on capability; staff reduced over years so we moved to a more steamlined system, resulting in VRIMS, in PROD in 2007; Provides licensee submission into RESULTS, so license holders can submit reports yearly, incl spatial component; Staff review data in VRIMS throughout the year; Published to DataBC; Assesses the severity (impact) based on wildfire data in a specific area (polygon); Oracle spatial DB; uses ARCmap for spatial; some challenges getting IT support - releases are adhoc; publishing to data warehouse is scheduled yearly; dataset is a provincial priority based on external demand;</p>"
+Seed use,Low Maturity,Operating Capabilities,TRUE,"<p><b>SPAR, CONSEP, SeedMap</b><br>SPAR: Process: support in general (from IT) is a challenge; Releases have been delayed; No clear R&R in IT; Funding and systems risks due to lack of clear processes; Requires info from the breeders, SPAR cannot account for new requriements (parent trees, developments from breeding programs), lacks capabilities to intake new info; Tech is not keeping up with the science;
+ process and org dimensions are performing well;</p>"
+Manage seedling Inventory,High,Operating Capabilities,TRUE,<p><b>NSA2</b><br>Nursery Shipping and Admin; Manage inventory of seedling; no external users; some info transfers back into SPAR and Consep; data transfer is automated; System is meeting the business needs; Updates to system 3 times a year - well supported; Updates are tied to production cycles - could be improved with more frequent releases (have workarounds); reporting is sufficient;</p>
+Appraisals,Low Maturity,Operating Capabilities,TRUE,"<p><b>ECAS, GAS2</b><br>ECAS breaking down - will go manual soon if not rewritten; Leg changes required twice a year, requires code changes from the vendor to address stumpage rate changes;</p>"
+Billings,Low Maturity,Operating Capabilities,TRUE,"<p><b>HBS, GBMS</b><br>HBS is CRITICAL: $1.2b yearly, 15+ years old; Legacy issues persist; Browser requirements are a risk; security risks increasing; Regular data fixes are needed; hundreds of enhancement requests are in the queue; need more fullsome integration; Training and documentation is inadequate; Used to have Robohelp but no longer supported; challenges in maintaining documentation, help, training, videos;"
+Asessment,Low Maturity,Operating Capabilities,TRUE,"<p><b>WASTE</b><br>Looking for a rewrite; need to accommodate procedure changes, and Leg changes;</p>"
+Engineering,Medium,Operating Capabilities,TRUE,"<p><b>LRM-OPS (COTS Trimble), CBR</b><br>Integration with RRS is ongoing, not fully automated; 3-year project to upgrade LRM for fuller integration;
+ CBR vendor challenges for enhancement/support; annual inspection cycle is tight for system upgrades - need better deployment cycles;
+ CBR has offline capabilities for inspections - sync capabilities; has small user base; uses FileMaker for offline with iPads. some staff do manual entries;</p>"
+Inspections,Medium,Operating Capabilities,TRUE,"<p><b>CIMS, NRIS</b><br>CIMS only used to view historical data; NRIS replaced CIMS; CIMS still used to review compliance history; Moving data from client and FTA is manual - could be automated, real-time; Some NRIS enhancements are outstanding, slow turn around from IITD; Need RRS integration;</p>"
+Investigations,Low Maturity,Operating Capabilities,TRUE,<p><b>ERA</b><br>Potentially expand NRIS to replace ERA; May need to keep ERA for historical data; Business case being prepared with options; Penalties are invoices through GBMS but initiated by ERA - this requirements needs to be kept;</p>
+Appeals,Low Maturity,Operating Capabilities,TRUE,<p><b>ERA</p></b>
+Electronic Forms Submission,Low Maturity,Enabling Capabilities,TRUE,<p><b>ESF</p></b>
+Reporting,Medium,Enabling Capabilities,TRUE,"<p><b>JCRS, CRS</p></b>"
+Calculator,Medium,Enabling Capabilities,TRUE,<p><b>NROS</p></b>
+Mapping,Medium,Enabling Capabilities,TRUE,"<p><b>CWM, SOS, MapView</p></b>"
+Financials/Corporate,Medium,Enabling Capabilities,TRUE,"<p><b>CAS, CHIPS</p></b>"
+File Transfer,Medium,Enabling Capabilities,TRUE,<p><b>FTP</p></b>
+Workflow,Medium,Enabling Capabilities,TRUE,<p><b>BPMN</p></b>
+Notifications,Medium,Enabling Capabilities,TRUE,"<p><b>Oracle WebMail, Mail Scheduler</p></b>"
+API Management,High,Enabling Capabilities,TRUE,<p><b>WSO2</p></b>
+Strategy Development,High,Planning Capabilties,TRUE,
+Business Planning,High,Planning Capabilties,TRUE,
+Budget Planning,High,Planning Capabilties,TRUE,
+Program Development and Monitoring,High,Planning Capabilties,TRUE,
