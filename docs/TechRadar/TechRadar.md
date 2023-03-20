@@ -38,13 +38,13 @@ Items in our Tech Radar have an expectation that is should be followed where app
 [CSV source data:](https://github.com/bcgov/nr-arch/blob/master/docs/TechRadar/IIT-TechnologyRadar.csv) 
 
 #### How is our radar built
-We use [Thoughtworks Tech Radar](https://radar.thoughtworks.com/) to generate our Tech Radar. The radar is backed by a single CSV file (that should nicely [render](https://help.github.com/en/github/managing-files-in-a-repository/rendering-csv-and-tsv-data)). CSV files are parsed using d3.js so please see their [documentation](https://d3-wiki.readthedocs.io/zh_CN/master/CSV/) for escaping rules. All changes to the Tech Radar should be completed via a pull request and merged by someone from IIT Architecture team.
+We use [Thoughtworks Tech Radar](https://radar.thoughtworks.com/) to generate our Tech Radar. The radar is backed by a single CSV file (that should nicely [render](https://help.github.com/en/github/managing-files-in-a-repository/rendering-csv-and-tsv-data)). CSV files are parsed using d3.js so please see their [documentation](https://d3-wiki.readthedocs.io/zh_CN/master/CSV/) for escaping rules. All changes to the Tech Radar should be completed via a pull request and merged by someone from NRIDS Architecture team.
 
 
 #### Who builds the radar?
-Our tech radar is open for anyone to contribute. Make a pull request to put a blip forward that you think needs to be in IIT's radar.
+Our tech radar is open for anyone to contribute. Make a pull request to put a blip forward that you think needs to be in NRIDS's radar.
 
-Contributions are reviewed by the IIT Architecture Team and various trusted advisers regularly as required.
+Contributions are reviewed by the NRIDS Architecture Team and various trusted advisers regularly as required.
 
 
 #### Previous Versions of radar
