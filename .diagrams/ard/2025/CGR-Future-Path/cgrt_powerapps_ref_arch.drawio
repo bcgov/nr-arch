@@ -1,0 +1,154 @@
+<mxfile agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0" version="26.0.14">
+  <diagram id="AE0GKUWSIE3-Xq0BhPTY" name="Page-1">
+    <mxGraphModel dx="1126" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-1" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1040" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-2" value="Dataverse Backend" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/power_platform/Dataverse.svg;" vertex="1" parent="1">
+          <mxGeometry x="526" y="373.8" width="68" height="52.400000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-3" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;outlineConnect=0;verticalAlign=top;align=center;shape=mxgraph.office.clouds.cloud_sharepoint;" vertex="1" parent="1">
+          <mxGeometry x="100" y="369.5" width="101" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-4" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;File Upload&lt;/h1&gt;&lt;p&gt;User will upload files to share point or an object store.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="430" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-5" value="" style="endArrow=classic;html=1;rounded=0;flowAnimation=1;" edge="1" parent="1" source="S6-iuf01uzb1vDiEV-hD-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="380" as="sourcePoint" />
+            <mxPoint x="360.0877272727273" y="399.15634876029435" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.928;exitY=0.466;exitDx=0;exitDy=0;exitPerimeter=0;flowAnimation=1;" edge="1" parent="1" source="S6-iuf01uzb1vDiEV-hD-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="400" as="sourcePoint" />
+            <mxPoint x="526" y="399.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-7" value="External Systems" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api" vertex="1" parent="1">
+          <mxGeometry x="125.5" y="280" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.893;exitY=0.785;exitDx=0;exitDy=0;exitPerimeter=0;flowAnimation=1;" edge="1" parent="1" source="S6-iuf01uzb1vDiEV-hD-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="310" as="sourcePoint" />
+            <mxPoint x="360" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-9" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#7AA116;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket_with_objects;" vertex="1" parent="1">
+          <mxGeometry x="113" y="550" width="48.08" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-10" value="" style="endArrow=classic;html=1;rounded=0;flowAnimation=1;" edge="1" parent="1" source="S6-iuf01uzb1vDiEV-hD-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="188" y="580" as="sourcePoint" />
+            <mxPoint x="360" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-11" value="Reporting" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/power_platform/PowerBI.svg;" vertex="1" parent="1">
+          <mxGeometry x="790" y="350" width="52.5" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.051;entryY=0.7;entryDx=0;entryDy=0;entryPerimeter=0;flowAnimation=1;exitX=0.971;exitY=0.481;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="S6-iuf01uzb1vDiEV-hD-2" target="S6-iuf01uzb1vDiEV-hD-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="398.58" as="sourcePoint" />
+            <mxPoint x="749" y="398.58" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-13" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/power_platform/PowerApps.svg;" vertex="1" parent="1">
+          <mxGeometry x="536.43" y="90" width="47.13" height="45.16" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-14" value="Canvas App&lt;div&gt;&amp;nbsp;Model Driven&lt;br&gt;UI is delivered through Power Apps&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="583.56" y="90" width="166.44" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.657;exitY=0.074;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.741;entryY=0.982;entryDx=0;entryDy=0;entryPerimeter=0;flowAnimation=1;" edge="1" parent="1" source="S6-iuf01uzb1vDiEV-hD-2" target="S6-iuf01uzb1vDiEV-hD-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="536.4300000000001" y="303.5" as="sourcePoint" />
+            <mxPoint x="675.4300000000001" y="303.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.288;exitY=0.996;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.333;entryY=0.061;entryDx=0;entryDy=0;entryPerimeter=0;flowAnimation=1;" edge="1" parent="1" source="S6-iuf01uzb1vDiEV-hD-13" target="S6-iuf01uzb1vDiEV-hD-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="581" y="388" as="sourcePoint" />
+            <mxPoint x="581" y="144" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-17" value="Power Automate to trigger ingestion on upload. Data Validataions in power automate" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="338.78" y="440" width="106.44" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-18" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/power_platform/PowerAutomate.svg;" vertex="1" parent="1">
+          <mxGeometry x="490" y="230" width="36" height="28.5" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-19" value="Power&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;automate&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;to trigger actions + Data Validations&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="270" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-20" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/power_platform/PowerAutomate.svg;" vertex="1" parent="1">
+          <mxGeometry x="360" y="385.5" width="36.63" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-21" value="Complex business logics requires Cusotm Plugins or API" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="494" y="460" width="136" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-22" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=user" vertex="1" parent="1">
+          <mxGeometry x="330" y="87.16000000000003" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-23" value="Entra ID / Guest Account" style="sketch=0;verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;fillColor=#000000;align=center;outlineConnect=0;pointerEvents=1;shape=mxgraph.citrix2.authentication_ms_entra_id;" vertex="1" parent="1">
+          <mxGeometry x="360" y="120" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.995;exitY=0.63;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.076;entryY=0.539;entryDx=0;entryDy=0;entryPerimeter=0;flowAnimation=1;" edge="1" parent="1" source="S6-iuf01uzb1vDiEV-hD-22" target="S6-iuf01uzb1vDiEV-hD-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="185.16" as="sourcePoint" />
+            <mxPoint x="380" y="135.16" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-25" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Power Platform Application Architecture&lt;/span&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="40" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-26" value="&lt;ul&gt;&lt;li&gt;End user can submit data one of two ways, upload to Sharepoint, Object storage or Upload through UI&lt;/li&gt;&lt;li&gt;Data Validations is possible in multiple places. Power Apps fields can have validation (limited functionality), Data Validation in Power Automate workflow (good for file upload), Data Validation in Dataverse&lt;/li&gt;&lt;li&gt;Transformation happens before data is inserted in Dataverse tables.&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Business logic exampe emissisons calculatio is done in Dataverse.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;PowerBi can connect to Dataverse for reporting needs.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" vertex="1" parent="1">
+          <mxGeometry x="610" y="500" width="430" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-27" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.cloud_config;" vertex="1" parent="1">
+          <mxGeometry x="357.38" y="350.89000000000004" width="22.62" height="22.91" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-28" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.cloud_config;" vertex="1" parent="1">
+          <mxGeometry x="571.38" y="64.27000000000004" width="22.62" height="22.91" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-29" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.cloud_config;" vertex="1" parent="1">
+          <mxGeometry x="467.38000000000005" y="194.36000000000007" width="22.62" height="22.91" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-30" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.cloud_config;" vertex="1" parent="1">
+          <mxGeometry x="594" y="350.89000000000004" width="22.62" height="22.91" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-31" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.cloud_config;" vertex="1" parent="1">
+          <mxGeometry x="780" y="305.09000000000003" width="22.62" height="22.91" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-32" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.source_code;" vertex="1" parent="1">
+          <mxGeometry x="390" y="348.07000000000005" width="20.86" height="28.55" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-33" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.source_code;" vertex="1" parent="1">
+          <mxGeometry x="505.14" y="194.36000000000007" width="20.86" height="28.55" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-34" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.source_code;" vertex="1" parent="1">
+          <mxGeometry x="622.62" y="348.07000000000005" width="20.86" height="28.55" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-35" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.source_code;" vertex="1" parent="1">
+          <mxGeometry x="600" y="61.450000000000045" width="20.86" height="28.55" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-36" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.source_code;" vertex="1" parent="1">
+          <mxGeometry x="814.5699999999999" y="300.00000000000006" width="20.86" height="28.55" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-37" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.cloud_config;" vertex="1" parent="1">
+          <mxGeometry x="70" y="50.00000000000004" width="22.62" height="22.91" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-38" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.source_code;" vertex="1" parent="1">
+          <mxGeometry x="71.75999999999999" y="87.16000000000003" width="20.86" height="28.55" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-39" value="Configuration" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="107.03999999999999" y="46.46" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="S6-iuf01uzb1vDiEV-hD-40" value="Code" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="107.03999999999999" y="90" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
