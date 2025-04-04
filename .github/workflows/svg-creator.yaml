@@ -15,7 +15,6 @@ jobs:
         ports:
           - 8080:8080
         options: >-
-          --entrypoint /bin/sh
           --health-cmd "curl -f http://localhost:8080/ || exit 1"
           --health-interval 30s
           --health-timeout 10s
