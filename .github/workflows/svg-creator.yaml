@@ -9,7 +9,17 @@ permissions:
 jobs:
   create-update-svg:
     runs-on: ubuntu-24.04
-
+    services:
+      drawio:
+        image: jgraph/drawio
+        ports:
+          - 8080:8080
+        options: >-
+          --entrypoint /bin/sh
+          --health-cmd "curl -f http://localhost:8080/ || exit 1"
+          --health-interval 30s
+          --health-timeout 10s
+          --health-retries 3
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -17,25 +27,15 @@ jobs:
         id: find-xml
         run: |
           echo "xml_files=$(find .diagrams -name "*.xml" -type f | tr '\n' ' ')" >> $GITHUB_OUTPUT
-      - name: Set up cache for apt
-        uses: actions/cache@v4
-        with:
-          path: /var/cache/apt
-          key: ${{ runner.os }}-apt-drawio-${{ hashFiles('**/svg-creator.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-apt-drawio
-
-      - name: install drawio binary
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y drawio
       - name: Create SVG files
         if: steps.find-xml.outputs.xml_files != ''
         run: |
           IFS=' ' read -r -a xml_files <<< "${{ steps.find-xml.outputs.xml_files }}"
           for file in "${xml_files[@]}"; do
             svg_file="${file%.xml}.svg"
-            drawio --export --format svg --output "$svg_file" "$file"
+            # Use curl to call the Draw.io service running in Docker
+            curl -s -o "$svg_file" -X POST -H "Content-Type: application/xml" --data-binary @"$file" "http://localhost:8080/export?format=svg"
+            echo "Created $svg_file from $file"
           done
       - name: Commit files to PR branch
         if: steps.find-xml.outputs.xml_files != ''
