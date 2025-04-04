@@ -29,7 +29,8 @@ jobs:
         run: |
           IFS=' ' read -r -a xml_files <<< "${{ steps.find-xml.outputs.xml_files }}"
           for file in "${xml_files[@]}"; do
-            xvfb-run drawio --export --format svg --output "${file%.xml}.svg" "$file"
+            xvfb-run -e xvfb-errors.log drawio --disable-gpu --no-sandbox --export --format svg --output "${file%.xml}.svg" "$file"
+            cat xvfb-errors.log || echo "No errors in xvfb-errors.log"
             echo "Created $svg_file from $file"
           done
       - name: Commit files to PR branch
