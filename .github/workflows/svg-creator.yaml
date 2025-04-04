@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }} # Checkout the pull request branch
       - name: Find all XML files in .diagrams folder
         id: find-xml
         run: |
@@ -42,8 +44,8 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git pull origin HEAD:${{ github.head_ref }} || echo "No changes to pull"
+          git pull || echo "No changes to pull"
           git add .diagrams/*.svg 
           git commit -m "Add SVG files from XML diagrams" || echo "No changes to commit"
-          git push origin HEAD:${{ github.head_ref }}
+          git push origin ${{ github.head_ref }} || echo "No changes to push"
         
