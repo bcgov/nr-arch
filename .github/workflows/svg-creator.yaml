@@ -9,17 +9,13 @@ permissions:
 jobs:
   create-update-svg:
     runs-on: ubuntu-24.04
-    services:
-      drawio:
-        image: jgraph/drawio
-        ports:
-          - 8080:8080
-        options: >-
-          --health-cmd "curl -f http://localhost:8080/ || exit 1"
-          --health-interval 30s
-          --health-timeout 10s
-          --health-retries 3
     steps:
+      - name: install drawio
+        run: |
+          wget https://github.com/jgraph/drawio-desktop/releases/download/v26.2.2/drawio-amd64-26.2.2.deb
+          sudo apt-get update
+          sudo apt-get install -y ./drawio-amd64-26.2.2.deb
+        
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -33,9 +29,7 @@ jobs:
         run: |
           IFS=' ' read -r -a xml_files <<< "${{ steps.find-xml.outputs.xml_files }}"
           for file in "${xml_files[@]}"; do
-            svg_file="${file%.xml}.svg"
-            # Use curl to call the Draw.io service running in Docker
-            curl -s -o "$svg_file" -X POST -H "Content-Type: application/xml" --data-binary @"$file" "http://localhost:8080/export?format=svg"
+            drawio --export --format svg --output "${file%.xml}.svg" "$file"
             echo "Created $svg_file from $file"
           done
       - name: Commit files to PR branch
