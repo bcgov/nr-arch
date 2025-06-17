@@ -31,5 +31,5 @@ jobs:
         with:
           github-token: ${{ secrets.PROJECT_PAT }}
           script: |
-            const script = require('./../scripts/project-automation.js');
+            const script = require('./.github/scripts/update-project-item-dates.js');
             await script({github, context, core})
