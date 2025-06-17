@@ -26,16 +26,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: print directories under .github
-        run: |
-          echo "Directories under .github:"
-          ls -l .github
-          echo "Directories under .github/scripts:"
-          ls -l .github/scripts
       - name: Update project item dates
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.PROJECT_PAT }}
           script: |
-            const script = require('.github/scripts/update-project-item-dates.js');
+            const script = require('.github/scripts/project-automation.js');
             await script({github, context, core})
