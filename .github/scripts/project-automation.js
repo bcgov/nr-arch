@@ -97,7 +97,7 @@ module.exports = async ({ github, context, core }) => {
     const inProgressOption = statusField.options?.find(
       (opt) =>
         opt.name &&
-        (opt.name.toLowerCase().includes("progress") ||
+        (opt.name.toLowerCase().includes("active") ||
           opt.name.toLowerCase().includes("in progress") ||
           opt.name.toLowerCase() === "doing")
     );
