@@ -30,6 +30,32 @@ jobs:
             
             console.log(`Event: ${context.eventName}, Action: ${context.payload.action}`);
             
+            // First, let's list all available projects to debug
+            const listProjectsQuery = `
+              query($org: String!) {
+                organization(login: $org) {
+                  projectsV2(first: 20) {
+                    nodes {
+                      id
+                      number
+                      title
+                      url
+                    }
+                  }
+                }
+              }
+            `;
+            
+            try {
+              const listResult = await github.graphql(listProjectsQuery, { org: orgName });
+              console.log('Available projects:');
+              listResult.organization.projectsV2.nodes.forEach(project => {
+                console.log(`- Project #${project.number}: ${project.title} (${project.url})`);
+              });
+            } catch (error) {
+              console.log('Error listing projects:', error.message);
+            }
+            
             // Get project ID and field IDs
             const projectQuery = `
               query($org: String!, $number: Int!) {
@@ -58,8 +84,7 @@ jobs:
                 }
               }
             `;
-            
-            try {
+              try {
               const projectResult = await github.graphql(projectQuery, {
                 org: orgName,
                 number: projectNumber
@@ -366,8 +391,21 @@ jobs:
                   }
                 }
               }
-              
-            } catch (error) {
+                } catch (error) {
               console.error('Error in project automation:', error.message);
               console.error('Full error:', error);
+              
+              // If project 257 is not found, try to find it by listing all projects
+              if (error.message.includes('Could not resolve to a ProjectV2 with the number 257')) {
+                console.log('Project #257 not found. This could mean:');
+                console.log('1. The project number is incorrect');
+                console.log('2. The project is private and the token lacks access');
+                console.log('3. The project belongs to a different organization');
+                console.log('');
+                console.log('Please check the project URL: https://github.com/orgs/bcgov/projects/257');
+                console.log('And verify the project number in the URL is correct.');
+                console.log('');
+                console.log('Available projects are listed above. Please update the projectNumber variable');
+                console.log('in the workflow file to match one of the available project numbers.');
+              }
             }
