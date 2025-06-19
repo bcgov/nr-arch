@@ -198,7 +198,7 @@ module.exports = async ({ github, context, core }) => {
 
         // Update start date if moved to "In Progress" and no start date exists
         if (
-          currentStatus?.optionId === inProgressOption?.id &&
+          (currentStatus?.optionId === inProgressOption?.id || currentStatus?.optionId === doneOption?.id) &&
           !startDateValue?.date
         ) {
           console.log(`Setting start date for item: ${item.content?.title}`);
