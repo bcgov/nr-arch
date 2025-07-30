@@ -48,3 +48,6 @@ When a PR with these keywords is merged, the linked issues will automatically:
 ### Manual Trigger
 
 You can manually run the automation by going to the Actions tab and triggering the "Project Board Automation" workflow.
+
+⚠️ IMPORTANT: The content in this repository is pulled by NRM Confluence. 
+    
