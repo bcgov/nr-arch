@@ -4,8 +4,8 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="4auOYNTbp9v8LEB9pfKI-6" value="" style="rounded=0;whiteSpace=wrap;html=1;glass=1;shadow=0;fillColor=#FFFEF0;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-290" y="-10" width="1420" height="1110" as="geometry" />
+        <mxCell id="4auOYNTbp9v8LEB9pfKI-6" value="" style="rounded=0;whiteSpace=wrap;html=1;glass=1;shadow=0;fillColor=#FFFEF0;strokeColor=default;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="-10" width="1330" height="1110" as="geometry" />
         </mxCell>
         <mxCell id="4auOYNTbp9v8LEB9pfKI-7" value="&lt;span&gt;Azure Subscription Within&lt;br&gt;OCIO Landing Zone&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Subscriptions.svg;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="403.61" y="10" width="24.79" height="40" as="geometry" />
@@ -134,6 +134,9 @@
               <mxPoint x="350" y="492" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="xMH-0FiajYIhmKAqVNs_-3" value="&lt;span style=&quot;line-height: 110%;&quot;&gt;&lt;font&gt;&lt;span&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;font&gt;&lt;span style=&quot;font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; line-height: 110%; display: inline !important;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;This architecture illustrates a secure integration between core application infrastructure and the Azure AI Foundry Platform within an OCIO Azure Landing Zone. Traffic from end users and external systems is routed through Azure FrontDoor with Web Application Firewall protection, ensuring edge-optimized content delivery. API traffic is strictly managed via Azure API Management and App Services, which are accessible only through private endpoints. Data flows securely between Cosmos DB, Storage Accounts, and AI services, enabling advanced search and AI capabilities using GPT-4o models. The design enforces robust security, scalability, and compliance by leveraging Azure’s native networking and managed service features.&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/font&gt;&lt;/span&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#dae8fc;strokeColor=#6c8ebf;fillStyle=solid;direction=west;gradientDirection=north;shadow=1;size=20;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="690" width="1280" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
