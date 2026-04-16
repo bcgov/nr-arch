@@ -1,0 +1,171 @@
+<mxfile host="Confluence" modified="2026-04-15" agent="Copilot" version="21.0">
+  <diagram id="three-layer-arch" name="Three-Layer Architecture Overview">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="&lt;b&gt;EO-DMI Legacy Data API Architecture — Three Layers&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="600" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- LAYER 1 — API Gateway -->
+        <mxCell id="layer1-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="1240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="layer1-label" value="&lt;b&gt;Layer 1 — API Gateway&lt;/b&gt;&lt;br&gt;Single Governance Plane" style="text;html=1;align=left;verticalAlign=top;fontSize=13;fontColor=#1a3d6e;" vertex="1" parent="1">
+          <mxGeometry x="100" y="85" width="300" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="consumers" value="&lt;b&gt;API Consumers&lt;/b&gt;&lt;br&gt;(Apps, Partners,&lt;br&gt;Internal Teams)" style="shape=mxgraph.basic.cloud_callout;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="100" y="120" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="appgw" value="&lt;b&gt;App Gateway&lt;/b&gt;&lt;br&gt;(WAF v2)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="135" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="apim" value="&lt;b&gt;Azure APIM&lt;/b&gt;&lt;br&gt;Standard v2&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;AuthN/AuthZ · Rate Limiting&lt;br&gt;Versioning · OpenAPI Portal&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="115" width="220" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="entra" value="&lt;b&gt;Microsoft&lt;br&gt;Entra ID&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;OAuth 2.0 / JWT&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="135" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="keyvault" value="&lt;b&gt;Azure&lt;br&gt;Key Vault&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;DB Credentials&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="135" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Arrows in Layer 1 -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6c8ebf;strokeWidth=2;flowAnimation=1;" edge="1" parent="1" source="consumers" target="appgw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6c8ebf;strokeWidth=2;flowAnimation=1;" edge="1" parent="1" source="appgw" target="apim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="validate-jwt" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#d6b656;strokeWidth=1;dashed=1;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="apim" target="entra">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="managed identity" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#d6b656;strokeWidth=1;dashed=1;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="apim" target="keyvault">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- LAYER 2 — API Runtime -->
+        <mxCell id="layer2-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="1240" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="layer2-label" value="&lt;b&gt;Layer 2 — API Runtime (Azure Container Apps)&lt;/b&gt;&lt;br&gt;VNet-Injected · Config-Driven · Zero Custom Code" style="text;html=1;align=left;verticalAlign=top;fontSize=13;fontColor=#2d6b2d;" vertex="1" parent="1">
+          <mxGeometry x="100" y="285" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ords" value="&lt;b&gt;Oracle ORDS&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;REST · GraphQL · SODA&lt;br&gt;GeoJSON / WKT&lt;br&gt;PL/SQL Gateway&lt;br&gt;OpenAPI 3 Auto-gen&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="120" y="340" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dab" value="&lt;b&gt;Microsoft DAB&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;REST · GraphQL&lt;br&gt;WKT Spatial&lt;br&gt;Config-driven JSON&lt;br&gt;OpenAPI 3 Auto-gen&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="400" y="340" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db2rest" value="&lt;b&gt;DB2Rest&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;(Fallback — Apache 2.0)&lt;br&gt;REST Only&lt;br&gt;Java / Spring Boot&lt;br&gt;Multi-DB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=12;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="340" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="faucet" value="&lt;b&gt;Faucet&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;(Fallback — MIT)&lt;br&gt;REST Only&lt;br&gt;Go / 8MB Memory&lt;br&gt;Early Access&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=12;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="340" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- APIM to Layer 2 arrows -->
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;strokeWidth=2;flowAnimation=1;" edge="1" parent="1" source="apim" target="ords">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;strokeWidth=2;flowAnimation=1;" edge="1" parent="1" source="apim" target="dab">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999999;strokeWidth=1;dashed=1;flowAnimation=1;" edge="1" parent="1" source="apim" target="db2rest">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999999;strokeWidth=1;dashed=1;flowAnimation=1;" edge="1" parent="1" source="apim" target="faucet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- LAYER 3 — On-Prem Databases -->
+        <mxCell id="layer3-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="560" width="1240" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="layer3-label" value="&lt;b&gt;Layer 3 — On-Premises Databases&lt;/b&gt;&lt;br&gt;Connected via Azure ExpressRoute (1–5 ms latency)" style="text;html=1;align=left;verticalAlign=top;fontSize=13;fontColor=#7a5900;" vertex="1" parent="1">
+          <mxGeometry x="100" y="565" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ExpressRoute -->
+        <mxCell id="expressroute" value="&lt;b&gt;Azure ExpressRoute&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Private Hybrid Connectivity&lt;br&gt;No Public Internet&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="520" width="240" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="oracledb" value="&lt;b&gt;Oracle Database&lt;/b&gt;&lt;br&gt;(Enterprise Edition)&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;SDO_GEOMETRY · Spatial Indexes&lt;br&gt;PL/SQL · ORDS_METADATA&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="160" y="620" width="220" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sqlserverdb" value="&lt;b&gt;SQL Server&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;geometry / geography Types&lt;br&gt;WKT / OGC Compliant&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="620" width="220" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Connectivity arrows -->
+        <mxCell id="e9" value="JDBC :1521" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=2;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="ords" target="oracledb">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="510" />
+              <mxPoint x="270" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="TDS :1433" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6c8ebf;strokeWidth=2;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="dab" target="sqlserverdb">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="510" />
+              <mxPoint x="610" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="880" y="600" width="400" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" value="&lt;b&gt;Legend&lt;/b&gt;" style="text;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="890" y="605" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" value="" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="900" y="630" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1t" value="Primary (Recommended)" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="930" y="627" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" value="" style="rounded=1;fillColor=#f5f5f5;strokeColor=#999999;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="652" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2t" value="Fallback (If Primary Unavailable)" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="930" y="649" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3" value="" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="900" y="674" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3t" value="Governance / Identity / Connectivity" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="930" y="671" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4" value="" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="900" y="696" width="20" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4t" value="Security / WAF / Secrets" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="930" y="693" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Core principle callout -->
+        <mxCell id="principle" value="&lt;b&gt;Core Principle:&lt;/b&gt; Don't code APIs. Configure them. Deploy as containers. Govern at the gateway." style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.5;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="780" width="400" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

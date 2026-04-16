@@ -1,0 +1,122 @@
+<mxfile host="Confluence" modified="2026-04-15" agent="Copilot" version="21.0">
+  <diagram id="request-lifecycle" name="API Request Lifecycle — Data Flow">
+    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="&lt;b&gt;API Request Lifecycle — End-to-End Data Flow&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="400" y="15" width="600" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Step 1: Consumer -->
+        <mxCell id="consumer" value="&lt;b&gt;API Consumer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Web App / Mobile App&lt;br&gt;Partner System&lt;br&gt;Internal Service&lt;/font&gt;" style="shape=mxgraph.basic.cloud_callout;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="170" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Step 2: WAF -->
+        <mxCell id="waf" value="&lt;b&gt;App Gateway&lt;/b&gt;&lt;br&gt;WAF v2&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#888&quot;&gt;OWASP filtering&lt;br&gt;DDoS protection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="115" width="140" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Step 3: APIM -->
+        <mxCell id="apim" value="&lt;b&gt;Azure APIM&lt;/b&gt;&lt;br&gt;Standard v2&lt;br&gt;&lt;font style=&quot;font-size:9px;color:#888&quot;&gt;validate-jwt policy&lt;br&gt;Rate limiting&lt;br&gt;API product routing&lt;br&gt;OpenAPI spec hosting&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="95" width="180" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Decision: Oracle or SQL Server? -->
+        <mxCell id="decision" value="&lt;b&gt;Route by&lt;br&gt;API Product&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="690" y="110" width="130" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Oracle path -->
+        <mxCell id="ords" value="&lt;b&gt;ORDS Container&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;ACA (VNet-injected)&lt;br&gt;Schema-alias routing&lt;br&gt;Auto-scaled replicas&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="890" y="70" width="180" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- SQL Server path -->
+        <mxCell id="dab" value="&lt;b&gt;DAB Container&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;ACA (VNet-injected)&lt;br&gt;Config-driven JSON&lt;br&gt;Auto-scaled replicas&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="890" y="190" width="180" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- ExpressRoute -->
+        <mxCell id="expressroute" value="&lt;b&gt;ExpressRoute&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;VNet Gateway&lt;br&gt;Private path · 1–5 ms&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="120" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- On-prem router -->
+        <mxCell id="router" value="&lt;b&gt;On-Prem&lt;br&gt;Router&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="130" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Oracle DB -->
+        <mxCell id="oracledb" value="&lt;b&gt;Oracle DB&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;On-Prem&lt;br&gt;JDBC :1521&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1520" y="60" width="120" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- SQL Server DB -->
+        <mxCell id="sqldb" value="&lt;b&gt;SQL Server&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;On-Prem&lt;br&gt;TDS :1433&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1520" y="190" width="120" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Flow arrows -->
+        <mxCell id="f1" value="①&lt;br&gt;HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;strokeWidth=2;fontSize=10;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="consumer" target="waf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="②&lt;br&gt;Filtered" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;strokeWidth=2;fontSize=10;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="waf" target="apim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="③&lt;br&gt;Authenticated" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;strokeWidth=2;fontSize=10;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="apim" target="decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" value="Oracle API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=2;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="decision" target="ords">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" value="SQL Server API" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6c8ebf;strokeWidth=2;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="decision" target="dab">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" value="④ JDBC" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=2;fontSize=10;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="ords" target="expressroute">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7" value="④ TDS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6c8ebf;strokeWidth=2;fontSize=10;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="dab" target="expressroute">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8" value="⑤" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9673a6;strokeWidth=2;fontSize=12;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="expressroute" target="router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=2;flowAnimation=1;" edge="1" parent="1" source="router" target="oracledb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6c8ebf;strokeWidth=2;flowAnimation=1;" edge="1" parent="1" source="router" target="sqldb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Response path annotation -->
+        <mxCell id="resp" value="&lt;font style=&quot;font-size:10px;color:#666&quot;&gt;⑥ JSON response flows back the same path.&lt;br&gt;ORDS returns GeoJSON/WKT for spatial data.&lt;br&gt;DAB returns WKT for SQL Server spatial types.&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="320" width="320" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Step labels along bottom -->
+        <mxCell id="s1" value="&lt;b&gt;① Consumer Request&lt;/b&gt;&lt;br&gt;Bearer JWT token" style="text;html=1;align=center;fontSize=10;fillColor=#f5f5f5;rounded=1;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="400" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="&lt;b&gt;② WAF Filtering&lt;/b&gt;&lt;br&gt;OWASP rules applied" style="text;html=1;align=center;fontSize=10;fillColor=#f5f5f5;rounded=1;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="220" y="400" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="&lt;b&gt;③ APIM Auth&lt;/b&gt;&lt;br&gt;JWT validated, routed" style="text;html=1;align=center;fontSize=10;fillColor=#f5f5f5;rounded=1;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="420" y="400" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="&lt;b&gt;④ DB Query&lt;/b&gt;&lt;br&gt;JDBC/TDS over VNet" style="text;html=1;align=center;fontSize=10;fillColor=#f5f5f5;rounded=1;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="620" y="400" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="&lt;b&gt;⑤ ExpressRoute&lt;/b&gt;&lt;br&gt;Private path to on-prem" style="text;html=1;align=center;fontSize=10;fillColor=#f5f5f5;rounded=1;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="820" y="400" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" value="&lt;b&gt;⑥ JSON Response&lt;/b&gt;&lt;br&gt;Back to consumer" style="text;html=1;align=center;fontSize=10;fillColor=#f5f5f5;rounded=1;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="400" width="160" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

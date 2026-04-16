@@ -1,0 +1,143 @@
+<mxfile host="Confluence" modified="2026-04-15" agent="Copilot" version="21.0">
+  <diagram id="decision-flow" name="Tool Selection Decision Flow">
+    <mxGraphModel dx="1500" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="&lt;b&gt;API Runtime Tool Selection — Decision Flow&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;color:#888&quot;&gt;Which tool to use based on database type, requirements, and geospatial needs&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=17;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="350" y="10" width="600" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Start -->
+        <mxCell id="start" value="&lt;b&gt;Start&lt;/b&gt;&lt;br&gt;Need to expose&lt;br&gt;legacy DB as API" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="580" y="70" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- D1: Which Database? -->
+        <mxCell id="d1" value="&lt;b&gt;Which source&lt;br&gt;database?&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="565" y="190" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Oracle Branch -->
+        <mxCell id="d2-oracle" value="&lt;b&gt;Oracle DBA&lt;br&gt;available &amp;amp;&lt;br&gt;Oracle Support&lt;br&gt;contracted?&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="160" y="340" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- ORDS recommendation -->
+        <mxCell id="ords-rec" value="&lt;b&gt;Oracle ORDS&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;✓ $0 (bundled with Oracle DB)&lt;br&gt;✓ Oracle Premier Support&lt;br&gt;✓ REST + GraphQL + SODA&lt;br&gt;✓ Best Oracle Spatial support&lt;br&gt;✓ GeoJSON / WKT native&lt;br&gt;✓ PL/SQL gateway&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="530" width="210" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- D3: Need GraphQL/SODA/APEX? -->
+        <mxCell id="d3" value="&lt;b&gt;Need GraphQL,&lt;br&gt;SODA, APEX, or&lt;br&gt;PL/SQL gateway?&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="310" y="530" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- DB2Rest recommendation -->
+        <mxCell id="db2rest-rec" value="&lt;b&gt;DB2Rest&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;(Fallback for Oracle)&lt;br&gt;✓ Apache 2.0&lt;br&gt;✓ Zero DB footprint&lt;br&gt;✓ Multi-DB support&lt;br&gt;✓ REST only&lt;br&gt;⚠ Geo needs POC&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=12;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="720" width="200" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- SQL Server Branch -->
+        <mxCell id="dab-rec" value="&lt;b&gt;Microsoft DAB&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;✓ MIT License&lt;br&gt;✓ Microsoft-supported&lt;br&gt;✓ Fabric-native&lt;br&gt;✓ REST + GraphQL&lt;br&gt;✓ Config-driven JSON&lt;br&gt;✓ WKT spatial support&lt;br&gt;✓ OpenAPI 3 auto-gen&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="340" width="210" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Both Oracle + SQL Server -->
+        <mxCell id="d4" value="&lt;b&gt;Want single tool&lt;br&gt;for both DBs?&lt;/b&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="340" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- DB2Rest for both -->
+        <mxCell id="db2rest-both" value="&lt;b&gt;DB2Rest&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Single tool for Oracle + SQL Server&lt;br&gt;✓ Apache 2.0 · REST&lt;br&gt;⚠ Community support only&lt;br&gt;⚠ Geospatial needs POC&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=11;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="520" width="210" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- ORDS + DAB combo -->
+        <mxCell id="combo" value="&lt;b&gt;ORDS + DAB&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Best-of-breed per DB&lt;br&gt;ORDS for Oracle&lt;br&gt;DAB for SQL Server&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="350" width="190" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Geospatial Decision -->
+        <mxCell id="geo-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#b85450;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="600" y="700" width="480" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="geo-title" value="&lt;b&gt;Geospatial Decision Rule&lt;/b&gt;" style="text;html=1;align=center;fontSize=13;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="700" y="705" width="280" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="geo1" value="&lt;b&gt;Oracle Spatial is authoritative?&lt;/b&gt; → &lt;font color=&quot;#b85450&quot;&gt;&lt;b&gt;ORDS&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;SDO_GEOMETRY, GeoJSON, WKT — first-class support&lt;/font&gt;" style="text;html=1;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="620" y="735" width="440" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="geo2" value="&lt;b&gt;SQL Server spatial + WKT acceptable?&lt;/b&gt; → &lt;font color=&quot;#6c8ebf&quot;&gt;&lt;b&gt;DAB&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;geometry/geography as WKT strings — consumers convert client-side&lt;/font&gt;" style="text;html=1;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="620" y="775" width="440" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="geo3" value="&lt;b&gt;Need validation before committing?&lt;/b&gt; → &lt;font color=&quot;#999999&quot;&gt;&lt;b&gt;DB2Rest / Faucet + POC&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;No documented spatial-first behavior — validate with proof of concept&lt;/font&gt;" style="text;html=1;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="620" y="815" width="440" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Flow arrows -->
+        <mxCell id="a1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;strokeWidth=2;flowAnimation=1;" edge="1" parent="1" source="start" target="d1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a2" value="Oracle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=2;fontSize=11;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="d1" target="d2-oracle">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a3" value="SQL Server" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#6c8ebf;strokeWidth=2;fontSize=11;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="d1" target="dab-rec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a4" value="Both" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;strokeWidth=2;fontSize=11;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="d1" target="d4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="655" y="310" />
+              <mxPoint x="1200" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="a5" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;strokeWidth=2;fontSize=11;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="d2-oracle" target="ords-rec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a6" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#cc0000;strokeWidth=2;fontSize=11;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="d2-oracle" target="d3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a7" value="Yes → still ORDS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#b85450;strokeWidth=2;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="d3" target="ords-rec">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="590" />
+              <mxPoint x="280" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="a8" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999999;strokeWidth=2;fontSize=11;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="d3" target="db2rest-rec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a9" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#999999;strokeWidth=2;fontSize=11;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="d4" target="db2rest-both">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a10" value="No — separate tools" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;strokeWidth=2;fontSize=10;fontStyle=1;flowAnimation=1;" edge="1" parent="1" source="d4" target="combo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Deployment callout -->
+        <mxCell id="deploy-box" value="&lt;b&gt;Deployment Recommendation&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;All tools → Docker containers on &lt;b&gt;Azure Container Apps (Consumption)&lt;/b&gt;&lt;br&gt;Lowest cost · Zero ops · Scale-to-zero · VNet + ExpressRoute&lt;br&gt;Use AKS Automatic only if OraOperator / K8s CRDs are required.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="530" width="430" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Summary rule -->
+        <mxCell id="rule" value="&lt;b&gt;One-Line Rule:&lt;/b&gt; Use this architecture to expose legacy databases as governed, real-time data APIs.&lt;br&gt;Do &lt;b&gt;not&lt;/b&gt; use it to build domain or business APIs." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="630" width="430" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

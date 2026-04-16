@@ -1,0 +1,124 @@
+<mxfile host="Confluence" modified="2026-04-15" agent="Copilot" version="21.0">
+  <diagram id="auth-flow" name="Authentication &amp; Authorization — End-to-End">
+    <mxGraphModel dx="1500" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="&lt;b&gt;Authentication &amp;amp; Authorization — End-to-End Flow&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px;color:#888&quot;&gt;Double Authorization: APIM (product/role level) + Backend Container (entity/table level)&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="300" y="10" width="700" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Step 1: Consumer App -->
+        <mxCell id="consumer" value="&lt;b&gt;Consumer App&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;(Registered in Entra ID&lt;br&gt;with scopes/roles)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Step 2: Entra ID -->
+        <mxCell id="entra" value="&lt;b&gt;Microsoft&lt;br&gt;Entra ID&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;App Registration&lt;br&gt;OAuth 2.0 / OIDC&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="160" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Step 3: JWT Token -->
+        <mxCell id="jwt" value="&lt;b&gt;Bearer JWT Token&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;audience, issuer,&lt;br&gt;expiry, app roles,&lt;br&gt;scopes&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="240" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Step 4: APIM -->
+        <mxCell id="apim" value="&lt;b&gt;Azure APIM&lt;/b&gt;&lt;br&gt;Standard v2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="500" y="150" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- APIM validation box -->
+        <mxCell id="apim-validate" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e8f9;strokeColor=#9673a6;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="230" width="260" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="apim-val-title" value="&lt;b&gt;APIM validate-jwt Policy&lt;/b&gt;" style="text;html=1;align=center;fontSize=12;fontColor=#6a3d9a;" vertex="1" parent="1">
+          <mxGeometry x="490" y="235" width="220" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="val1" value="✓ Validate token signature (Entra OIDC)" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="265" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="val2" value="✓ Check audience &amp;amp; issuer" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="290" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="val3" value="✓ Verify token expiry" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="315" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="val4" value="✓ Check app roles / scopes for API product" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="340" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="val5" value="✓ Rate limiting &amp;amp; throttling" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="365" width="230" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Step 5: ACA Backend -->
+        <mxCell id="aca" value="&lt;b&gt;ACA Backend&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;ORDS / DAB / DB2Rest&lt;br&gt;Accepts traffic only from APIM&lt;br&gt;Entity-level RBAC from&lt;br&gt;JWT claims (headers)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="820" y="250" width="210" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Step 6: Key Vault -->
+        <mxCell id="keyvault" value="&lt;b&gt;Azure Key Vault&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;DB Credentials&lt;br&gt;(ACA Secrets backed)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="820" y="430" width="210" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Step 7: On-Prem DB -->
+        <mxCell id="db" value="&lt;b&gt;On-Prem Database&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Oracle / SQL Server&lt;br&gt;Least-privilege service accounts&lt;br&gt;Read-only where possible&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="280" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Flow arrows with step numbers -->
+        <mxCell id="a1" value="&lt;b&gt;① Authenticate&lt;/b&gt;&lt;br&gt;OAuth 2.0 client credentials" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#d6b656;strokeWidth=2;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="consumer" target="entra">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="&lt;b&gt;② Receive JWT&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#d6b656;strokeWidth=2;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="entra" target="jwt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="&lt;b&gt;③ Call API with Bearer token&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#333333;strokeWidth=2;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="consumer" target="apim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="&lt;b&gt;④ validate-jwt&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#9673a6;strokeWidth=2;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="apim" target="apim-validate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="&lt;b&gt;⑤ Forward + claims headers&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Managed identity (no secrets in flight)&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#82b366;strokeWidth=2;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="apim-validate" target="aca">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="&lt;b&gt;⑥ Fetch DB creds&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#d6b656;strokeWidth=2;fontSize=10;dashed=1;flowAnimation=1;" edge="1" parent="1" source="aca" target="keyvault">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" value="&lt;b&gt;⑦ JDBC/TDS over ExpressRoute&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Least-privilege service account&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeColor=#d79b00;strokeWidth=2;fontSize=10;flowAnimation=1;" edge="1" parent="1" source="aca" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Key design decisions callout -->
+        <mxCell id="notes-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="530" width="520" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="notes-title" value="&lt;b&gt;Key Design Decisions&lt;/b&gt;" style="text;html=1;align=left;fontSize=12;fontColor=#333;" vertex="1" parent="1">
+          <mxGeometry x="55" y="535" width="250" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="• DB credentials in ACA Secrets backed by Azure Key Vault — not in config files" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="560" width="480" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="• APIM authenticates to ACA using managed identity — zero secrets in transit" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="580" width="480" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="• Double authorization: APIM (product/role level) + backend container (entity/table level)" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="600" width="480" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" value="• DB service accounts are least-privilege — read-only where possible, no DBA access" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="620" width="480" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" value="• ACA accepts traffic only from APIM — no direct backend access" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="640" width="480" height="18" as="geometry" />
+        </mxCell>
+
+        <!-- Note: assumption -->
+        <mxCell id="assumption" value="&lt;font style=&quot;font-size:10px;color:#cc0000&quot;&gt;⚠ This auth flow is an assumption — needs to be tested and refined.&lt;/font&gt;" style="text;html=1;align=center;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="300" y="70" width="450" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
