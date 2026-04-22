@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36">
   <diagram name="NRM DAP Architecture" id="dap-arch-1">
-    <mxGraphModel dx="1414" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1488" dy="782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -16,8 +16,8 @@
         <mxCell id="tND-vOZmIB_yLmIrTRRd-1" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/integration/API_Management_Services.svg;" value="Data APIs" vertex="1">
           <mxGeometry height="60" width="65" x="80" y="490" as="geometry" />
         </mxCell>
-        <mxCell id="tND-vOZmIB_yLmIrTRRd-2" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Folder_Blank.svg;" value="ObjectStore &lt;br&gt;structured/unstructued &lt;br&gt;data&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="56.00000000000001" width="69" x="80" y="340" as="geometry" />
+        <mxCell id="tND-vOZmIB_yLmIrTRRd-2" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Folder_Blank.svg;" value="&lt;span&gt;ObjectStore &lt;br&gt;semi-structured&amp;nbsp;&lt;br&gt;unstructured &lt;br&gt;data&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="56.00000000000001" width="69" x="78" y="349" as="geometry" />
         </mxCell>
         <mxCell id="tND-vOZmIB_yLmIrTRRd-3" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#C925D1;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.rds_oracle_instance;" value="" vertex="1">
           <mxGeometry height="78" width="78" x="80" y="110" as="geometry" />
@@ -31,6 +31,19 @@
             <Array as="points">
               <mxPoint x="528" y="149" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gs6gX5lirwC6gsw9yxR7-5" edge="1" parent="1" source="tND-vOZmIB_yLmIrTRRd-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;curved=0;dashed=1;dashPattern=12 12;flowAnimation=1;exitX=0.294;exitY=0.471;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.965;entryY=0.646;entryDx=0;entryDy=0;entryPerimeter=0;" target="gs6gX5lirwC6gsw9yxR7-1" value="Proxy User and Password">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="328" />
+              <mxPoint x="310" y="328" />
+              <mxPoint x="310" y="330" />
+              <mxPoint x="230" y="330" />
+              <mxPoint x="230" y="278" />
+            </Array>
+            <mxPoint x="485" y="327.9963157894738" as="sourcePoint" />
+            <mxPoint x="230" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="tND-vOZmIB_yLmIrTRRd-5" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Application_Gateway.svg;" value="On-Premise&lt;br&gt;Data Gateway" vertex="1">
@@ -123,6 +136,9 @@
         </mxCell>
         <mxCell id="6kwbV5JD-CVI1E9MMIHl-1" parent="1" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;editableCssRules=.*;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJ1dWlkLWY4ZDRkMzkyLTdjMTItNGJkOS1iYWZmLTY2ZmJmNzgxNGI5MSIgZGF0YS1uYW1lPSJMYXllciAxIiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCI+JiN4YTsgIDxwYXRoIGQ9Im0zLjgwMiwxNC4wMzJjLjM4OC4yNDIsMS4wMzMuNTExLDEuNzE1LjUxMS42MjEsMCwxLjE5OC0uMTgsMS42NzYtLjQ4NywwLDAsLjAwMSwwLC4wMDItLjAwMWwxLjgwNS0xLjEyOHY0LjA3M2MtLjI4NiwwLS41NzQtLjA3OC0uODI0LS4yMzRsLTQuMzc0LTIuNzM0WiIgZmlsbD0iIzIyNTA4NiIvPiYjeGE7ICA8cGF0aCBkPSJtNy44NTMsMS41MDdMLjM1Myw5Ljk2N2MtLjU3OS42NTQtLjQyOCwxLjY0Mi4zMjMsMi4xMTEsMCwwLDIuNzc2LDEuNzM1LDMuMTI2LDEuOTU0LjM4OC4yNDIsMS4wMzMuNTExLDEuNzE1LjUxMS42MjEsMCwxLjE5OC0uMTgsMS42NzYtLjQ4NywwLDAsLjAwMSwwLC4wMDItLjAwMWwxLjgwNS0xLjEyOC00LjM2NC0yLjcyOCw0LjM2NS00LjkyNFYxczAsMCwwLDBjLS40MjQsMC0uODQ3LjE2OS0xLjE0Ny41MDdaIiBmaWxsPSIjNmRmIi8+JiN4YTsgIDxwb2x5Z29uIHBvaW50cz0iNC42MzYgMTAuMTk5IDQuNjg4IDEwLjIzMSA5IDEyLjkyNyA5LjAwMSAxMi45MjcgOS4wMDEgMTIuOTI3IDkuMDAxIDUuMjc2IDkgNS4yNzUgNC42MzYgMTAuMTk5IiBmaWxsPSIjY2JmOGZmIi8+JiN4YTsgIDxwYXRoIGQ9Im0xNy4zMjQsMTIuMDc4Yy43NTEtLjQ2OS45MDItMS40NTcuMzIzLTIuMTExbC00LjkyMS01LjU1MWMtLjM5Ny0uMTg1LS44NDItLjI5MS0xLjMxMy0uMjkxLS45MjUsMC0xLjc1Mi4zOTktMi4zMDIsMS4wMjZsLS4xMDkuMTIzaDBzNC4zNjQsNC45MjQsNC4zNjQsNC45MjRoMHMwLDAsMCwwbC00LjM2NSwyLjcyOHY0LjA3M2MuMjg3LDAsLjU3My0uMDc4LjgyMy0uMjM0bDcuNS00LjY4OFoiIGZpbGw9IiMwNzQ3OTMiLz4mI3hhOyAgPHBhdGggZD0ibTkuMDAxLDF2NC4yNzVzLjEwOS0uMTIzLjEwOS0uMTIzYy41NS0uNjI3LDEuMzc3LTEuMDI2LDIuMzAyLTEuMDI2LjQ3MiwwLC45MTYuMTA3LDEuMzEzLjI5MWwtMi41NzktMi45MDljLS4yOTktLjMzOC0uNzIzLS41MDctMS4xNDYtLjUwN1oiIGZpbGw9IiMwMjk0ZTQiLz4mI3hhOyAgPHBvbHlnb24gcG9pbnRzPSIxMy4zNjUgMTAuMTk5IDEzLjM2NSAxMC4xOTkgMTMuMzY1IDEwLjE5OSA5LjAwMSA1LjI3NiA5LjAwMSAxMi45MjYgMTMuMzY1IDEwLjE5OSIgZmlsbD0iIzk2YmNjMiIvPiYjeGE7PC9zdmc+;" value="Entra &#xa;Authentication and &#xa;Authoriztion" vertex="1">
           <mxGeometry height="70" width="70" x="900" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="gs6gX5lirwC6gsw9yxR7-1" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Azure_Database_PostgreSQL_Server.svg;" value="Postgres" vertex="1">
+          <mxGeometry height="105.33" width="79" x="81" y="210" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
