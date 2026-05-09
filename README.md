@@ -9,6 +9,7 @@ This repository includes GitHub Actions automation for the [NR Architecture Proj
 
 - **Automatic Start Date Tracking**: When an issue status is changed to "In Progress", the system automatically adds the current date to the Start Date field
 - **Automatic Completion Date Tracking**: When an issue status is changed to "Done" or when a PR that closes an issue is merged, the system automatically adds the current date to the Completed Date field
+- **Confluence Diagrams**: all files inside .diagrams folder are referred in multiple places in NRM confluence.
 
 ### Required Project Fields
 
