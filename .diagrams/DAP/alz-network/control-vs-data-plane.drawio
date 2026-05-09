@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Control vs Data Plane" id="cp-dp-1">
+    <mxGraphModel dx="1406" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dev" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Developer Machine / GitHub Actions" vertex="1">
+          <mxGeometry height="60" width="180" x="40" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="arm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Azure Resource Manager&#xa;(management.azure.com)&#xa;CONTROL PLANE" vertex="1">
+          <mxGeometry height="80" width="220" x="320" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vnet" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;verticalAlign=top;" value="BCGov Subscription spoke vnet [/24]&amp;nbsp;" vertex="1">
+          <mxGeometry height="540" width="480" x="640" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uQhxNJP61SCADTZXsPRL-1" edge="1" parent="1" source="pe" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;curved=0;dashed=1;dashPattern=12 12;flowAnimation=1;strokeWidth=2;" target="sql">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="210" />
+              <mxPoint x="1090" y="438" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pe" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Private Endpoints&#xa;DATA PLANE (default for all PaaS)" vertex="1">
+          <mxGeometry height="60" width="300" x="680" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="kv" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Key Vault&#xa;(public access disabled)" vertex="1">
+          <mxGeometry height="50" width="200" x="800" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="sql" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="SQL / Cosmos DB&#xa;(public access disabled)" vertex="1">
+          <mxGeometry height="50" width="200" x="800" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="st" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#f57c00;strokeWidth=2;fontStyle=1;" value="Storage Account&#xa;EXCEPTION: public data plane ALLOWED&#xa;(gated by service firewall + RBAC)" vertex="1">
+          <mxGeometry height="80" width="200" x="800" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999;align=left;verticalAlign=top;fontSize=11;" value="Legend:&#xa;━━ green: ALLOWED (control plane)&#xa;┅┅ red: BLOCKED (private data plane)&#xa;━━ orange: ALLOWED (Storage exception)" vertex="1">
+          <mxGeometry height="100" width="280" x="40" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="dev" style="endArrow=classic;html=1;strokeColor=#82b366;flowAnimation=1;strokeWidth=2;fontColor=#2e7d32;dashed=1;dashPattern=12 12;" target="arm" value="control plane">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="arm" style="endArrow=classic;html=1;strokeColor=#82b366;flowAnimation=1;strokeWidth=2;fontColor=#2e7d32;dashed=1;dashPattern=12 12;" target="pe" value="ARM manages all">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="dev" style="endArrow=classic;html=1;dashed=1;strokeColor=#b85450;flowAnimation=1;strokeWidth=2;fontColor=#b85450;dashPattern=12 12;" target="kv" value="public data plane&#xa;BLOCKED">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3b" edge="1" parent="1" source="dev" style="endArrow=classic;html=1;dashed=1;strokeColor=#b85450;flowAnimation=1;strokeWidth=2;fontColor=#b85450;entryX=0;entryY=0.25;entryDx=0;entryDy=0;dashPattern=12 12;" target="sql" value="public data plane&#xa;BLOCKED">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="800" y="365.6493506493507" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3c" edge="1" parent="1" source="dev" style="endArrow=classic;html=1;strokeColor=#f57c00;flowAnimation=1;strokeWidth=3;fontColor=#e65100;fontStyle=1;dashed=1;dashPattern=12 12;" target="st" value="public data plane&#xa;ALLOWED (only exception)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="pe" style="endArrow=classic;html=1;flowAnimation=1;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;rounded=1;curved=0;dashed=1;dashPattern=12 12;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="kv">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="210" />
+              <mxPoint x="1060" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQhxNJP61SCADTZXsPRL-2" edge="1" parent="1" source="pe" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=0;dashed=1;dashPattern=12 12;flowAnimation=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;strokeWidth=2;" target="st">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="210" />
+              <mxPoint x="1110" y="210" />
+              <mxPoint x="1110" y="548" />
+              <mxPoint x="1000" y="548" />
+            </Array>
+            <mxPoint x="1080" y="320" as="sourcePoint" />
+            <mxPoint x="1100" y="548" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
