@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Private Endpoint and DNS — Key Vault and PostgreSQL" id="pe-dns-1">
+    <mxGraphModel dx="1406" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vnet" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666;dashed=1;verticalAlign=top;fontStyle=1;" value="Spoke VNet  10.46.0.0/24&#xa;(default bcgov allocation — extendable on request)" vertex="1">
+          <mxGeometry height="680" width="1180" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="VM / App / ACA&#xa;10.46.0.10  (snet-app /27)" vertex="1">
+          <mxGeometry height="70" width="200" x="80" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dns" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" value="Azure DNS&#xa;168.63.129.16" vertex="1">
+          <mxGeometry height="70" width="180" x="500" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="0gJtCKeqW_H3lINbthzb-5" edge="1" parent="1" source="link-kv" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=0;flowAnimation=1;" target="pdz-kv">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="330" />
+              <mxPoint x="790" y="340" />
+              <mxPoint x="440" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link-kv" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="VNet Link" vertex="1">
+          <mxGeometry height="40" width="80" x="1030" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="pdz-kv" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Private DNS Zone&#xa;privatelink.vaultcore.azure.net&#xa;A: mykv = 10.46.0.36" vertex="1">
+          <mxGeometry height="80" width="220" x="330" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="pe-kv" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Private Endpoint NIC&#xa;10.46.0.36  (snet-pe /27)&#xa;sub-resource: vault" vertex="1">
+          <mxGeometry height="80" width="200" x="90" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="kv" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" value="Azure Key Vault&#xa;mykv.vault.azure.net&#xa;publicNetworkAccess = Disabled" vertex="1">
+          <mxGeometry height="80" width="260" x="510" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="0gJtCKeqW_H3lINbthzb-4" edge="1" parent="1" source="link-pg" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;curved=0;dashed=1;dashPattern=12 12;flowAnimation=1;" target="pdz-pg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-pg" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="VNet Link" vertex="1">
+          <mxGeometry height="40" width="80" x="1030" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="pdz-pg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Private DNS Zone&#xa;privatelink.postgres.database.azure.com&#xa;A: mypg = 10.46.0.37" vertex="1">
+          <mxGeometry height="80" width="220" x="590" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="pe-pg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Private Endpoint NIC&#xa;10.46.0.37  (snet-pe /27)&#xa;sub-resource: postgresqlServer" vertex="1">
+          <mxGeometry height="80" width="200" x="90" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="pg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" value="PostgreSQL Flexible Server&#xa;mypg.postgres.database.azure.com&#xa;publicNetworkAccess = Disabled" vertex="1">
+          <mxGeometry height="80" width="260" x="510" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#999;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;fontSize=11;" value="Resolution flow (numbered):&#xa;1 client asks Azure DNS for the hostname&#xa;2 Azure DNS checks the linked Private DNS Zone&#xa;3 zone returns the private IP (10.46.0.36 / .37)&#xa;4 client connects to the Private Endpoint NIC&#xa;5 PE forwards to the PaaS service over the Microsoft backbone" vertex="1">
+          <mxGeometry height="100" width="690" x="80" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="e1a" edge="1" parent="1" source="vm" style="endArrow=classic;html=1;flowAnimation=1;strokeWidth=2;fontSize=11;" target="dns" value="1 query mykv">
+          <mxGeometry relative="1" y="15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2a" edge="1" parent="1" source="dns" style="endArrow=classic;html=1;flowAnimation=1;strokeWidth=2;fontSize=11;" target="pdz-kv" value="2 lookup">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3a" edge="1" parent="1" source="dns" style="endArrow=classic;html=1;flowAnimation=1;strokeWidth=2;fontSize=11;" target="vm" value="3 returns 10.46.0.36">
+          <mxGeometry relative="1" x="-0.0909" y="35" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4a" edge="1" parent="1" source="vm" style="endArrow=classic;html=1;flowAnimation=1;strokeWidth=2;fontSize=11;exitX=0.575;exitY=0.971;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;dashPattern=12 12;" target="pe-kv" value="4 connect">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5a" edge="1" parent="1" source="pe-kv" style="endArrow=classic;html=1;flowAnimation=1;strokeWidth=2;dashed=1;fontSize=11;" target="kv" value="5 private link">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1b" edge="1" parent="1" source="vm" style="endArrow=classic;html=1;flowAnimation=1;strokeWidth=2;fontSize=11;dashed=1;dashPattern=12 12;" target="dns" value="1 query mypg">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2b" edge="1" parent="1" source="dns" style="endArrow=classic;html=1;flowAnimation=1;strokeWidth=2;fontSize=11;dashed=1;dashPattern=12 12;" target="pdz-pg" value="2 lookup">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4b" edge="1" parent="1" source="vm" style="endArrow=classic;html=1;flowAnimation=1;strokeWidth=2;fontSize=11;dashed=1;dashPattern=12 12;" target="pe-pg" value="4 connect">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="150" />
+              <mxPoint x="70" y="240" />
+              <mxPoint x="80" y="460" />
+              <mxPoint x="180" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5b" edge="1" parent="1" source="pe-pg" style="endArrow=classic;html=1;flowAnimation=1;strokeWidth=2;dashed=1;fontSize=11;" target="pg" value="5 private link">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(153, 255, 153)); font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;p class=&quot;___1et8vw6 f18zxyen f1mevb6&quot; style=&quot;margin-bottom: 12px; margin-top: 12px; font-family: &amp;quot;Segoe UI&amp;quot;, &amp;quot;Segoe UI Web (West European)&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: rgb(214, 214, 214);&quot;&gt;&lt;strong class=&quot;___1cb78qm fl43uef&quot; style=&quot;font-weight: 600; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(153, 255, 153)); font-size: 11px;&quot;&gt;VNet Link — what it does&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;___yduxjt0 fjh19gf f18zxyen f1mevb6 f1mswpri&quot; style=&quot;padding-left: 24px; margin-bottom: 12px; margin-top: 12px; list-style-type: revert; font-family: &amp;quot;Segoe UI&amp;quot;, &amp;quot;Segoe UI Web (West European)&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: rgb(214, 214, 214);&quot;&gt;&lt;li class=&quot;___ka489f0 f8l5zjj&quot; style=&quot;margin-bottom: 4px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(153, 255, 153)); font-size: 11px;&quot;&gt;Joins a&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong class=&quot;___1cb78qm fl43uef&quot; style=&quot;font-weight: 600;&quot;&gt;Private DNS Zone&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;to a&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong class=&quot;___1cb78qm fl43uef&quot; style=&quot;font-weight: 600;&quot;&gt;VNet&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;so Azure DNS (168.63.129.16) consults the zone for lookups&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;___ka489f0 f8l5zjj&quot; style=&quot;margin-bottom: 4px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(153, 255, 153)); font-size: 11px;&quot;&gt;Without the link → hostnames resolve to the&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong class=&quot;___1cb78qm fl43uef&quot; style=&quot;font-weight: 600;&quot;&gt;public IP&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;→ service rejects with&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;code class=&quot;___j8udjr0 f1ctqxl6 f1jl2yie fq9zq91 f19n0e5 f7w2ec9 fg9hu40 fywfov9 fruq291 f7x41pl fclwglc&quot; style=&quot;border-color: rgb(82, 82, 82); border-style: solid; border-width: 1px; border-image: none 100% / 1 / 0 stretch; border-radius: 2px; padding: 2px 4px; font-family: ui-monospace, SFMono-Regular, &amp;quot;SF Mono&amp;quot;, Menlo, Consolas, &amp;quot;Liberation Mono&amp;quot;, monospace; background-color: rgb(10, 10, 10); color: rgb(255, 255, 255);&quot;&gt;403&lt;/code&gt;&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;___ka489f0 f8l5zjj&quot; style=&quot;margin-bottom: 4px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(153, 255, 153)); font-size: 11px;&quot;&gt;It is a separate Azure resource that lives&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong class=&quot;___1cb78qm fl43uef&quot; style=&quot;font-weight: 600;&quot;&gt;on the zone&lt;/strong&gt;, not on the VNet&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p class=&quot;___1et8vw6 f18zxyen f1mevb6&quot; style=&quot;margin-bottom: 12px; margin-top: 12px; font-family: &amp;quot;Segoe UI&amp;quot;, &amp;quot;Segoe UI Web (West European)&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: rgb(214, 214, 214);&quot;&gt;&lt;strong class=&quot;___1cb78qm fl43uef&quot; style=&quot;font-weight: 600; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(153, 255, 153)); font-size: 11px;&quot;&gt;Cardinality&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;&lt;ul class=&quot;___yduxjt0 fjh19gf f18zxyen f1mevb6 f1mswpri&quot; style=&quot;padding-left: 24px; margin-bottom: 12px; margin-top: 12px; list-style-type: revert; font-family: &amp;quot;Segoe UI&amp;quot;, &amp;quot;Segoe UI Web (West European)&amp;quot;, -apple-system, BlinkMacSystemFont, Roboto, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: rgb(214, 214, 214);&quot;&gt;&lt;li class=&quot;___ka489f0 f8l5zjj&quot; style=&quot;margin-bottom: 4px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(153, 255, 153)); font-size: 11px;&quot;&gt;&lt;strong class=&quot;___1cb78qm fl43uef&quot; style=&quot;font-weight: 600;&quot;&gt;One zone per PaaS service type&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;(e.g. one&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;code class=&quot;___j8udjr0 f1ctqxl6 f1jl2yie fq9zq91 f19n0e5 f7w2ec9 fg9hu40 fywfov9 fruq291 f7x41pl fclwglc&quot; style=&quot;border-color: rgb(82, 82, 82); border-style: solid; border-width: 1px; border-image: none 100% / 1 / 0 stretch; border-radius: 2px; padding: 2px 4px; font-family: ui-monospace, SFMono-Regular, &amp;quot;SF Mono&amp;quot;, Menlo, Consolas, &amp;quot;Liberation Mono&amp;quot;, monospace; background-color: rgb(10, 10, 10); color: rgb(255, 255, 255);&quot;&gt;privatelink.vaultcore.azure.net&lt;/code&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;for&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;em class=&quot;___11wyd0v f1j4dglz&quot; style=&quot;font-style: italic;&quot;&gt;all&lt;/em&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;Key Vaults)&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;___ka489f0 f8l5zjj&quot; style=&quot;margin-bottom: 4px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(153, 255, 153)); font-size: 11px;&quot;&gt;&lt;strong class=&quot;___1cb78qm fl43uef&quot; style=&quot;font-weight: 600;&quot;&gt;One VNet Link per (zone, VNet)&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;pair — not per Private Endpoint&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;___ka489f0 f8l5zjj&quot; style=&quot;margin-bottom: 4px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(153, 255, 153)); font-size: 11px;&quot;&gt;&lt;strong class=&quot;___1cb78qm fl43uef&quot; style=&quot;font-weight: 600;&quot;&gt;One A-record per Private Endpoint&lt;/strong&gt;, inside the zone&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li class=&quot;___ka489f0 f8l5zjj&quot; style=&quot;margin-bottom: 4px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(153, 255, 153)); font-size: 11px;&quot;&gt;A VNet links to&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong class=&quot;___1cb78qm fl43uef&quot; style=&quot;font-weight: 600;&quot;&gt;many&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;zones (one per service type); a zone links to&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;strong class=&quot;___1cb78qm fl43uef&quot; style=&quot;font-weight: 600;&quot;&gt;many&lt;/strong&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;VNets&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&lt;br&gt;&lt;/span&gt;" id="0gJtCKeqW_H3lINbthzb-3">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1">
+            <mxGeometry height="320" width="430" x="780" y="350" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
